@@ -9,7 +9,7 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Personal Information</title>
+        <title>ersonal Information</title>
     </head>
     <body>
         <h1>personal_info.jsp</h1>
