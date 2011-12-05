@@ -9,7 +9,7 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
-        <link rel="stylesheet" type="text/css" href="main.css" />
+        <link rel="stylesheet" type="text/css" href="<%=request.getContextPath()%>/main.css" />
     </head>
         <div id="pagewidth">
             <body>
