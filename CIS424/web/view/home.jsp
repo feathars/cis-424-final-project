@@ -22,11 +22,11 @@
         <br>
         <table class="home">
             <td>
-                <a href="view/log_In.jsp">Log In</a>
+                <a href="<%=request.getContextPath()%>/view/log_in.jsp">Log In</a>
             </td>
             <td> | </td>
             <td>
-                <a href="view/sign_Up.jsp">Sign Up</a>
+                <a href="<%=request.getContextPath()%>/view/sign_up.jsp">Sign Up</a>
             </td>
         </table>
     </body>
