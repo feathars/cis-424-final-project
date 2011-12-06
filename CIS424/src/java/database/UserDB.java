@@ -8,10 +8,10 @@ public class UserDB
     public static int insert(User user, Connection connection)
     {
         String query = 
-                "INSERT INTO User (FirstName, LastName, EmailAddress, CompanyName, " + 
+                "insert into USER_T (FirstName, LastName, EmailAddress, CompanyName, " + 
                 "Address1, Address2, City, State, Zip, Country, " +
                 "CreditCardType, CreditCardNumber, CreditCardExpirationDate) " +
-                "VALUES (?, ?, ?, ?, " +
+                "values (?, ?, ?, ?, " +
                 "?, ?, ?, ?, ?, ?, " +
                 "?, ?, ?)";
         try

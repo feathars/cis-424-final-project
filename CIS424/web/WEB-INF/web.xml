@@ -12,6 +12,10 @@
         <servlet-name>User</servlet-name>
         <servlet-class>business.User</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>Education</servlet-name>
+        <servlet-class>business.Education</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>sql_connection_servlet</servlet-name>
         <url-pattern>/sql_connection</url-pattern>
@@ -23,6 +27,10 @@
     <servlet-mapping>
         <servlet-name>User</servlet-name>
         <url-pattern>/user</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Education</servlet-name>
+        <url-pattern>/education</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
