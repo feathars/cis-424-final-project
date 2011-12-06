@@ -1,9 +1,7 @@
 package business;
 
 import java.io.Serializable;
-import business.User;
-import java.util.Date;
-import java.lang.*;
+import java.util.*;
 
 public class Member extends User implements Serializable
 {
@@ -22,10 +20,10 @@ public class Member extends User implements Serializable
     private boolean lookingForJob;
     private String homePhone;
     private String cellPhone;
+    private ArrayList education;
     
     public Member()
     {
-        super();
         lastNameOnDiploma = "";
         gender = "";
         about = "";
@@ -41,6 +39,7 @@ public class Member extends User implements Serializable
         lookingForJob = false;
         homePhone = "";
         cellPhone = "";
+        education = new ArrayList();
     }
     
     public void setLastNameOnDiploma(String lastNameOnDiploma)
@@ -192,12 +191,24 @@ public class Member extends User implements Serializable
     {
         return cellPhone;
     }
-
-    // this works, but it mixes the Model and the View
-    public String getAddressHTMLFormat()
+    
+    public void setEducation(ArrayList education)
     {
-        String address = street + "<br>" + city + ", " + state + " " + zip;
-
-        return address;
+        this.education = education;
+    }
+    
+    public ArrayList getEducation()
+    {
+        return education;
+    }
+    
+    public void addEducation(Education education)
+    {
+        this.education.add(education);
+    }
+    
+    public void removeEducation(int index)
+    {
+        this.education.remove(index);
     }
 }

@@ -1,11 +1,11 @@
 package business;
 
 import java.io.Serializable;
+import java.text.*;
 import java.util.Date;
 
 public class User implements Serializable
 {
-    private int ID;
     private String firstName;
     private String lastName;
     private String email;
@@ -13,16 +13,10 @@ public class User implements Serializable
     
     public User()
     {
-        ID = 0;
         firstName = "";
         lastName = "";
         email = "";
         creationDate = "";
-    }
-    
-    public int getID()
-    {
-        return ID;
     }
     
     public void setFirstName(String firstName)
@@ -53,5 +47,24 @@ public class User implements Serializable
     public String getEmailAddress()
     {
         return email;
+    }
+    
+    public String getCreationDateAsString()
+    {
+        return creationDate;
+    }
+    
+    public Date getCreationDateAsDate(String dateFormat)
+    {
+        DateFormat format = new SimpleDateFormat(dateFormat);
+        Date date = new Date();
+        
+        try {
+            date = format.parse(creationDate);
+        } catch (ParseException ex) {
+            System.out.println("Error parsing creation date.");
+        }
+        
+        return date;
     }
 }

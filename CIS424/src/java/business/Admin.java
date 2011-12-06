@@ -1,10 +1,9 @@
 package business;
 
 import java.io.Serializable;
-import java.util.Date;
 
-public class Admin implements Serializable
-{ 
+public class Admin extends User implements Serializable
+{
     public Admin()
     {
         super();
