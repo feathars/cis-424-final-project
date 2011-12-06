@@ -1,16 +1,17 @@
 <%@include file="header_intro.jsp" %>
 
-<title>Forgot Password</title>
+<title>Close Account</title>
 <br><br>
             <div id="box">
-                <table width="100%" ><tr><td colspan="2"><h2>Forgot Password</h2></td>
+                <table width="100%" ><tr><td colspan="2"><h2>Close Account</h2></td>
                     <tr>
-                        <td colspan="2">Please enter the email associated with your account.</td>
+                        <td colspan="2">Enter users email address to close account.</td>
+                    </tr>    
+                    <tr><td colspan="2">
+                            <!-- The email you entered was not in the database.-->
+                        </td></tr>
+                    
                     <tr>
-                     <tr>
-                         <td colspan="2"><!-- The email you entered was not in our records.-->
-                         </td>
-                     </tr>
                         <td class="right_align">Email: </td>
                         <td class="left_align"><input type="text" name="email"></input></td></tr>
                     <tr><td>                            
@@ -19,7 +20,7 @@
                         <td class="right_align"><input type="button" value="Cancel" 
                                                        onclick="window.location.href='home.jsp'" 
                                                        title="Goes to Homepage" ></td>
-                        <td class="left_align"><input type="submit" value="Submit"></input></input></td>
+                        <td class="left_align"><input type="submit" value="Close Account"></input></input></td>
                     </tr>
                     </table>    </div>
 </div>

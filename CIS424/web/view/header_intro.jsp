@@ -14,5 +14,6 @@
         <div id="pagewidth">
             <body>
             <div id="header">
-            
+                <img src="images/imgT.png" width="75px" style=" float: left" ></img>
+                <br><b style=" float: left; font-size:25px;" >CPP Alumni Network</b></br>
             </div>
