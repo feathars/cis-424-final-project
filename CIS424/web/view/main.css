@@ -5,24 +5,29 @@
     Description:
         Controls all the styles for the all the pages.
 */
-
-body {
+html,body 
+{
+   margin:0;
+   padding:0;
+   height:100%;
+}
+/* body {
     margin:0; 
     padding:0;
-    /*padding-top: 50px;*/
+    //padding-top: 50px;
     padding-bottom: 60px;
-}
-#pagewidth{ 
-    width:100%;
-    margin:0 auto; 
-    padding:0; 
-    text-align:center; 
+ }*/
+ #pagewidth{ 
+ width:100%;
+ margin:0 auto; 
+ padding:0; 
+ text-align:center; 
 }
 /* Aligns the homepage image in the center of the page with some spacing from
 the top of the page*/
 h2{
-    text-align: center;
-
+   text-align: center;
+   
 }
 .border{
     margin-right: auto;
@@ -47,51 +52,33 @@ table.home{
 }
 #header
 {
-    background-color: #1E4D2B;
-    color: #C6930A;   
-    height: 55px;
+ background-color: #1E4D2B;
+ color: #C6930A;   
+ height: 75px;
 }
 /* box used to display for the table, aligns the left column to the right*/
 #box{
-    width:350px;
+    -webkit-box-shadow: 10px 10px 10px 8px #000000rgba;
+    -moz-box-shadow: 10px 10px 10px 8px #000000rgba;
+    box-shadow: 10px 10px 10px 8px #000000;
+    width:380px;
     padding:10px;
     border:0px solid gray;
-    margin:0px auto;
+    margin:0px auto; 
+    border-radius:15px;
     text-align: center;
-
-    /*Set the background gradient */
-    background-image: linear-gradient(bottom, rgb(73,138,73) 13%, rgb(95,194,108) 57%);
-    background-image: -o-linear-gradient(bottom, rgb(73,138,73) 13%, rgb(95,194,108) 57%);
-    background-image: -moz-linear-gradient(bottom, rgb(73,138,73) 13%, rgb(95,194,108) 57%);
-    background-image: -webkit-linear-gradient(bottom, rgb(73,138,73) 13%, rgb(95,194,108) 57%);
-    background-image: -ms-linear-gradient(bottom, rgb(73,138,73) 13%, rgb(95,194,108) 57%);
-
-    background-image: -webkit-gradient(
-        linear,
-        left bottom,
-        left top,
-        color-stop(0.13, rgb(73,138,73)),
-        color-stop(0.57, rgb(95,194,108))
-        );
-
-    /* Set the border radius */
-    -webkit-border-radius: 10px;
-    -moz-border-radius: 10px;
-    border-radius: 10px;
-
-    /* Set the shadow */
-    -webkit-box-shadow: 7px 7px 10px #636363;
-    -moz-box-shadow: 7px 7px 10px #636363;
-    box-shadow: 7px 7px 10px #636363;
 }
 /*used for the table, aligns the left column to the right*/
-.left_column{
-    width:50%;
+.center_align{
+    text-align: center;
+}
+.right_align{
+    width:45%;
     text-align: right;
 }
 /*used for the table, aligns the left column to the right*/
-.right_column{
-    width:50%;
+.left_align{
+    width:55%;
     text-align: left;
 }
 /*Footer to display terms of use, copyright, and contact us page*/
@@ -103,19 +90,30 @@ table.home{
     color: #FFF;
     margin: 0;
     padding: 0;
-    /*Creates a gradient color for the footer, which is in all the pages.*/
-    background-image: linear-gradient(bottom, #140F0F 16%, #756F6F 58%, #ADA3A3 85%);
-    background-image: -o-linear-gradient(bottom, #140F0F 16%, #756F6F 58%, #ADA3A3 85%);
-    background-image: -moz-linear-gradient(bottom, #140F0F 16%, #756F6F 58%, #ADA3A3 85%);
-    background-image: -webkit-linear-gradient(bottom, #140F0F 16%, #756F6F 58%, #ADA3A3 85%);
-    background-image: -ms-linear-gradient(bottom, #140F0F 16%, #756F6F 58%, #ADA3A3 85%);
+/*Creates a gradient color for the footer, which is in all the pages.*/
 
-    background-image: -webkit-gradient(
-        linear,
-        right bottom,
-        right top,
-        color-stop(0.16, #140F0F),
-        color-stop(0.58, #756F6F),
-        color-stop(0.85, #ADA3A3)
-        );
+background-image: linear-gradient(bottom, #140F0F 16%, #756F6F 58%, #ADA3A3 85%);
+background-image: -o-linear-gradient(bottom, #140F0F 16%, #756F6F 58%, #ADA3A3 85%);
+background-image: -moz-linear-gradient(bottom, #140F0F 16%, #756F6F 58%, #ADA3A3 85%);
+background-image: -webkit-linear-gradient(bottom, #140F0F 16%, #756F6F 58%, #ADA3A3 85%);
+background-image: -ms-linear-gradient(bottom, #140F0F 16%, #756F6F 58%, #ADA3A3 85%);
+
+background-image: -webkit-gradient(
+	linear,
+	right bottom,
+	right top,
+	color-stop(0.16, #140F0F),
+	color-stop(0.58, #756F6F),
+	color-stop(0.85, #ADA3A3)
+);
+}
+
+#container {
+   min-height:100%;
+   position:relative;
+}
+
+#body {
+   padding:10px;
+   padding-bottom:60px;   /* Height of the footer */
 }
