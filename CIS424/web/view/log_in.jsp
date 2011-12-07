@@ -8,17 +8,17 @@
                         </td></tr>
                     <tr>
                         <td class="right_align" title="Enter email">Email: </td>
-                        <td class="left_align"><input type="text" name="email" title="Enter password"></input></td></tr>
+                        <td class="left_align"><input type="text" name="email" title="Enter password"/></td></tr>
                     <tr>
                         <td class="right_align">Password: </td>
-                        <td class="left_align"><input type="password" name="password"></input></td></tr>
+                        <td class="left_align"><input type="password" name="password"/></td></tr>
                     <tr><td>                            
                         </td></tr>
                     <tr colspan="2">
                         <td class="right_align"><input type="button" value="Cancel" 
                                                        onclick="window.location.href='home.jsp'" 
-                                                       title="Goes to Homepage" ></td>
-                        <td class="left_align"><input type="submit" value="Log In" title="Welcome back"></input></td>
+                                                       title="Goes to Homepage"/></td>
+                        <td class="left_align"><input type="submit" value="logIn" title="Welcome back"/></td>
                     </tr>
                     <tr>
                         <td class="right_align"><a href="forgot_password.jsp" 

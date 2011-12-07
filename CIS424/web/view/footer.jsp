@@ -10,7 +10,7 @@ int currentYear = currentDate.get(Calendar.YEAR);
 
 <div id="footer">
                 <ul id="footer">
-                    <li><a style="text-decoration: none; color: #FFFFFF" href="terms.jsp"/> Terms of Use</a> | &copy; Copyright <%= currentYear %>CPP Alumni Network</li>
+                    <li><a style="text-decoration: none; color: #FFFFFF" href="terms.jsp"/> Terms of Use</a> | &copy; Copyright <%= currentYear %> CPP Alumni Network</li>
                 </ul>
             </div>
     
