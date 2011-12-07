@@ -1,15 +1,4 @@
-<%-- 
-    Document   : work_information.jsp
-    Created on : Nov 30, 2011, 12:43:18 PM
-    Author     : Gabriel Zavala
---%>
-
-
-<%@page contentType="text/html" pageEncoding="UTF-8"%>
-<!DOCTYPE html>
-<html>
-    <head>
-        <%@include file="scripts/scripts.jsp" %> 
+<%@include file="header_user.jsp" %>
         <link rel="stylesheet" type="text/css" href="styles/demo.css" />
         <link rel="stylesheet" type="text/css" href="styles/index.css" />
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
