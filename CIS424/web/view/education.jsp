@@ -4,19 +4,12 @@
     Author     : Administrador
 --%>
 
+<%@include file="header_user.jsp" %>
 
-<%@page contentType="text/html" pageEncoding="UTF-8"%>
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>education</title>
-        <link rel="stylesheet" type="text/css" media="screen" href="styles/css.css" />
-    </head>
     <body>
-        <h1>education.jsp</h1>
-        <form action="userInfoServlet" method="post">
-    <table  class="example-code" cellspacing="5" border="0">
+        <h1>Education</h1>
+        <form action="<%= response.encodeURL("userInfoServlet")%>" method="post">
+    <table  id="box" cellspacing="5" border="0">
         <tr>
             <td align="left" width="150">Institution: </td>
             <td><input type="text" name="institution" size="50"></td>
@@ -166,8 +159,7 @@
         </tr>
     </table>
     </form>
-
-    </body>
-</html>
+        
+        <%@include file="footer.jsp" %>
 
 
