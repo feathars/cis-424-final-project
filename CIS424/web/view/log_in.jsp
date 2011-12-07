@@ -14,7 +14,7 @@
             <td class="left_align"><input type="password" name="password"/></td>
         </tr>   
     </table>
-        <input type="button" value="Cancel" onClick="window.location.href='<%= response.encodeURL("home.jsp")%>'"/>
+        <input type="button" value="Cancel" onClick="window.location.href='home.jsp'"/>
         <input type="submit" value="Log In" style="margin-bottom: 10px; margin-top: 10px;"/>
         <br>
         <font size="2"><a href="forgot_password.jsp" title="If you forgot password click this link">Forgot Password</a>

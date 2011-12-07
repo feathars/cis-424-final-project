@@ -34,8 +34,9 @@
         </script>
 
     </head>
+    <body>
     <div id="pagewidth">
-        <body>
+        
             <div id="header">
                 <a href="home.jsp"><image src="<%= request.getContextPath()%>/images/CPP_logoblack.gif" height="75px" style=" float: left"/></a>
                 <br>
