@@ -8,7 +8,7 @@
                         <td colspan="2">Please enter the email associated with your account.</td>
                     <tr>
                      <tr>
-                         <td colspan="2"><!-- The email you entered was not in our records.-->
+                         <td colspan="2"><%@include file="error.jsp" %><!-- The email you entered was not in our records.-->
                          </td>
                      </tr>
                         <td class="right_align">Email: </td>
