@@ -2,8 +2,8 @@
     <%@include file="header_intro.jsp" %>
     <title>Sign Up</title>
     <br><br>
-    <div id="box">
-        <table width="100%" cellpadding="2px"><tr><td colspan="2"><h2>Sign Up</h2></td>
+    <div id="box"><h2>Sign Up</h2>
+        <table width="100%" cellpadding="2px"><tr><td colspan="2"></td>
             <tr><td colspan="2">* Indicates required field.</td></tr>
             <tr><td colspan="2"><!-- Please fill in the required fields.--></td> </tr>
             <tr>
