@@ -61,6 +61,17 @@ public class User implements Serializable
         return password;
     }
     
+    public void setCreationDateWithString(String creationDate)
+    {
+        this.creationDate = creationDate;
+    }
+    
+    public void setCreationDateWithDate(Date creationDate)
+    {
+        DateFormat dateFormat = new SimpleDateFormat("mm/dd/yyyy hh:mm:ss");
+        this.creationDate = dateFormat.format(creationDate);
+    }
+    
     public String getCreationDateAsString()
     {
         return creationDate;
