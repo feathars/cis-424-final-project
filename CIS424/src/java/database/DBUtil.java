@@ -26,4 +26,30 @@ public class DBUtil extends HttpServlet {
 
         return connection;
     }
+    
+    public static void closePreparedStatement(Statement ps)
+    {
+        try
+        {
+            if (ps != null)
+                ps.close();
+        }
+        catch(SQLException e)
+        {
+            System.out.println("Error closing prepared statement!");
+        }
+    }
+
+    public static void closeResultSet(ResultSet rs)
+    {
+        try
+        {
+            if (rs != null)
+                rs.close();
+        }
+        catch(SQLException e)
+        {
+            System.out.println("Error closing result set!");
+        }
+    }
 }
