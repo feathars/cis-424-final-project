@@ -13,7 +13,7 @@
         <li><a style="text-decoration: none; color: #FFFFFF" href="<%= response.encodeURL("terms.jsp")%>"/> Terms of Use</a> | &copy; Copyright <%= currentYear%> CPP Alumni Network</li>
     </ul>
 </div>
-    
+
 </div>
 </body>
 </html>
