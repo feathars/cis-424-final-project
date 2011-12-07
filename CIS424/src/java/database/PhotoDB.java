@@ -113,7 +113,7 @@ public class PhotoDB
                 "userPhoto.UserID = ?";
         try
         {        
-            connection.prepareStatement(query);
+            ps = connection.prepareStatement(query);
             ps.setInt(1, userID);
             rs = ps.executeQuery();
             ArrayList<Photo> photos = new ArrayList<Photo>();

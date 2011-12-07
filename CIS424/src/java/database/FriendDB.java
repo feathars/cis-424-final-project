@@ -96,7 +96,7 @@ public class FriendDB
                 "where UserID = ?";
         try
         {
-            connection.prepareStatement(query);
+            ps = connection.prepareStatement(query);
             ps.setInt(1, userID);
             rs = ps.executeQuery();
             ArrayList<Integer> friends = new ArrayList<Integer>();

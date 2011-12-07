@@ -28,7 +28,7 @@ public class UserDB
         
         try
         {     
-            connection.prepareStatement(query);
+            ps = connection.prepareStatement(query);
             ps.setString(1, member.getFirstName());
             ps.setString(2, member.getLastName());
             ps.setString(3, member.getLastNameOnDegree());
@@ -93,7 +93,7 @@ public class UserDB
         
         try
         {
-            connection.prepareStatement(query);
+            ps = connection.prepareStatement(query);
             
             if (user.getClass().isAssignableFrom(Member.class))
             {
@@ -232,7 +232,7 @@ public class UserDB
         PreparedStatement ps = null;
         ResultSet rs = null;
         
-        String query = "select * from User " +
+        String query = "select * from `cis424`.`USER_T` " +
                        "where Email = ?";
         try
         {
@@ -256,7 +256,7 @@ public class UserDB
                     member.setPostition(rs.getString("Position"));
                     member.setStreet(rs.getString("Street"));
                     member.setCity(rs.getString("City"));
-                    member.setState(rs.getString("State"));
+                    member.setState(rs.getString("StateID"));
                     member.setZip(rs.getString("Zip"));
                     member.setWorkWebsite(rs.getString("WorkWebsite"));
                     member.setWebsite(rs.getString("Website"));
@@ -265,8 +265,8 @@ public class UserDB
                     member.setHomePhone(rs.getString("HomePhone"));
                     member.setCellPhone(rs.getString("CellPhone"));
                     member.setPassword(rs.getString("Password"));
-                    member.setCreationDateWithDate(rs.getDate("CreationDate"));
-                    member.setEducation(EducationDB.select(user)); //Get education list from EducationDB
+                    member.setCreationDateWithString(rs.getString("CreationDate"));
+                    member.setEducation(EducationDB.select(member)); //Get education list from EducationDB
                     
                     user = member;
                 }
@@ -287,7 +287,7 @@ public class UserDB
         }
         catch (SQLException e)
         {
-            System.out.println("Error selecting user.");
+            System.out.println("Error selecting user: " + e.getLocalizedMessage());
             return null;
         }        
         finally
