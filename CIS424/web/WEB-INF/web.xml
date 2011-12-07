@@ -20,6 +20,18 @@
         <servlet-name>StateDB</servlet-name>
         <servlet-class>database.StateDB</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>EducationDB</servlet-name>
+        <servlet-class>database.EducationDB</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>PhotoDB</servlet-name>
+        <servlet-class>database.PhotoDB</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>RequestDB</servlet-name>
+        <servlet-class>database.RequestDB</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>sql_connection_servlet</servlet-name>
         <url-pattern>/sql_connection</url-pattern>
@@ -39,6 +51,18 @@
     <servlet-mapping>
         <servlet-name>StateDB</servlet-name>
         <url-pattern>/StateDB</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>EducationDB</servlet-name>
+        <url-pattern>/EducationDB</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>PhotoDB</servlet-name>
+        <url-pattern>/PhotoDB</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>RequestDB</servlet-name>
+        <url-pattern>/RequestDB</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

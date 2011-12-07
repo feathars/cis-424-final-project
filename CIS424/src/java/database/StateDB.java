@@ -4,8 +4,10 @@ import java.sql.*;
 
 public class StateDB
 {
-    public static int selectID(String state, Connection connection)
+    public static int selectID(String state)
     {
+        ConnectionPool pool = ConnectionPool.getInstance();
+        Connection connection = pool.getConnection();
         PreparedStatement ps = null;
         ResultSet rs = null;
         
@@ -30,6 +32,7 @@ public class StateDB
         {
             DBUtil.closePreparedStatement(ps);
             DBUtil.closeResultSet(rs);
+            pool.freeConnection(connection);
         }
     }
 }

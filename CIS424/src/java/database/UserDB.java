@@ -7,15 +7,17 @@ import java.text.*;
 
 public class UserDB
 {
-    public static int insertMember(Member member, Connection connection)
+    public static int insertMember(Member member)
     {
         DateFormat dateFormat = new SimpleDateFormat("mm/dd/yyyy hh:mm:ss");
         String creationDate = dateFormat.format(new Date());
-        int StateID = StateDB.selectID(member.getState(), connection); //Get StateID from STATE_T
+        int StateID = StateDB.selectID(member.getState()); //Get StateID from STATE_T
         
+        ConnectionPool pool = ConnectionPool.getInstance();
+        Connection connection = pool.getConnection();
         PreparedStatement ps = null;
         
-        String query = 
+        String query =
                 "insert into `cis424`.`USER_T` (UserTypeID, FirstName, LastName, LastNameOnDegree, " + 
                 "Gender, About, ProfessionalSkills, Employer, Position, Street, " +
                 "City, StateID, Zip, WorkWebsite, Website, LookingForJob, HomePhone, CellPhone, " +
@@ -57,12 +59,14 @@ public class UserDB
         finally
         {
             DBUtil.closePreparedStatement(ps);
+            pool.freeConnection(connection);
         }
     }
     
-    public static int updateMember(Member member, Connection connection)
-    {
-        int StateID = StateDB.selectID(member.getState(), connection); //Get StateID from STATE_T
+    public static int update(User user)
+    {   
+        ConnectionPool pool = ConnectionPool.getInstance();
+        Connection connection = pool.getConnection();
         PreparedStatement ps = null;
         
         String query = "update `cis424`.`USER_T` set " +
@@ -90,26 +94,61 @@ public class UserDB
         try
         {
             connection.prepareStatement(query);
-            ps.setString(1, member.getFirstName());
-            ps.setString(2, member.getLastName());
-            ps.setString(3, member.getLastNameOnDegree());
-            ps.setString(4, member.getGender());
-            ps.setString(5, member.getAbout());
-            ps.setString(6, member.getProfessionalSkills());
-            ps.setString(7, member.getEmployer());
-            ps.setString(8, member.getPosition());
-            ps.setString(9, member.getStreet());
-            ps.setString(10, member.getCity());
-            ps.setInt(11, StateID);
-            ps.setString(12, member.getZip());
-            ps.setString(13, member.getWorkWebsite());
-            ps.setString(14, member.getWebsite());
-            ps.setBoolean(15, member.getLookingForJob());
-            ps.setString(16, member.getEmail());
-            ps.setString(17, member.getHomePhone());
-            ps.setString(18, member.getCellPhone());
-            ps.setString(19, member.getPassword());
-            ps.setString(20, member.getEmail());
+            
+            if (user.getClass().isAssignableFrom(Member.class))
+            {
+                Member member = (Member)user;
+                
+                int StateID = StateDB.selectID(member.getState()); //Get StateID from STATE_T
+                
+                ps.setString(1, member.getFirstName());
+                ps.setString(2, member.getLastName());
+                ps.setString(3, member.getLastNameOnDegree());
+                ps.setString(4, member.getGender());
+                ps.setString(5, member.getAbout());
+                ps.setString(6, member.getProfessionalSkills());
+                ps.setString(7, member.getEmployer());
+                ps.setString(8, member.getPosition());
+                ps.setString(9, member.getStreet());
+                ps.setString(10, member.getCity());
+                ps.setInt(11, StateID);
+                ps.setString(12, member.getZip());
+                ps.setString(13, member.getWorkWebsite());
+                ps.setString(14, member.getWebsite());
+                ps.setBoolean(15, member.getLookingForJob());
+                ps.setString(16, member.getEmail());
+                ps.setString(17, member.getHomePhone());
+                ps.setString(18, member.getCellPhone());
+                ps.setString(19, member.getPassword());
+                ps.setString(20, member.getEmail());
+            }
+            else if (user.getClass().isAssignableFrom(Admin.class))
+            {
+                Admin admin = (Admin)user;
+                
+                ps.setString(1, admin.getFirstName());
+                ps.setString(2, admin.getLastName());
+                ps.setString(3, "NULL");
+                ps.setString(4, "NULL");
+                ps.setString(5, "NULL");
+                ps.setString(6, "NULL");
+                ps.setString(7, "NULL");
+                ps.setString(8, "NULL");
+                ps.setString(9, "NULL");
+                ps.setString(10, "NULL");
+                ps.setString(11, "NULL");
+                ps.setString(12, "NULL");
+                ps.setString(13, "NULL");
+                ps.setString(14, "NULL");
+                ps.setString(15, "NULL");
+                ps.setString(16, admin.getEmail());
+                ps.setString(17, "NULL");
+                ps.setString(18, "NULL");
+                ps.setString(19, admin.getPassword());
+                ps.setString(20, admin.getEmail());
+            }
+            else
+                return 0;
             
             return ps.executeUpdate();
         }
@@ -120,11 +159,14 @@ public class UserDB
         finally
         {
             DBUtil.closePreparedStatement(ps);
+            pool.freeConnection(connection);
         }
     }
     
-    public static boolean emailExists(String email, Connection connection)
+    public static boolean emailExists(String email)
     {
+        ConnectionPool pool = ConnectionPool.getInstance();
+        Connection connection = pool.getConnection();
         PreparedStatement ps = null;
         ResultSet rs = null;
         
@@ -146,11 +188,14 @@ public class UserDB
         {
             DBUtil.closeResultSet(rs);
             DBUtil.closePreparedStatement(ps);
+            pool.freeConnection(connection);
         }
     }
     
-    public static int selectID(User user, Connection connection)
+    public static int selectID(User user)
     {
+        ConnectionPool pool = ConnectionPool.getInstance();
+        Connection connection = pool.getConnection();
         PreparedStatement ps = null;
         ResultSet rs = null;
         
@@ -175,12 +220,15 @@ public class UserDB
         {
             DBUtil.closeResultSet(rs);
             DBUtil.closePreparedStatement(ps);
+            pool.freeConnection(connection);
         }
     }
     
     //This method returns null if a record isn't found.
-    public static User selectUser(String email, Connection connection)
+    public static User select(String email)
     {
+        ConnectionPool pool = ConnectionPool.getInstance();
+        Connection connection = pool.getConnection();
         PreparedStatement ps = null;
         ResultSet rs = null;
         
@@ -218,6 +266,7 @@ public class UserDB
                     member.setCellPhone(rs.getString("CellPhone"));
                     member.setPassword(rs.getString("Password"));
                     member.setCreationDateWithDate(rs.getDate("CreationDate"));
+                    member.setEducation(EducationDB.select(user)); //Get education list from EducationDB
                     
                     user = member;
                 }
@@ -245,6 +294,7 @@ public class UserDB
         {
             DBUtil.closeResultSet(rs);
             DBUtil.closePreparedStatement(ps);
+            pool.freeConnection(connection);
         }
     }
 }

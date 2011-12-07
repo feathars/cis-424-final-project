@@ -20,7 +20,8 @@ public class Member extends User implements Serializable
     private boolean lookingForJob;
     private String homePhone;
     private String cellPhone;
-    private ArrayList education;
+    private ArrayList<Education> education;
+    private ArrayList<String> photos;
     
     public Member()
     {
@@ -39,7 +40,8 @@ public class Member extends User implements Serializable
         lookingForJob = false;
         homePhone = "NULL";
         cellPhone = "NULL";
-        education = new ArrayList();
+        education = new ArrayList<Education>();
+        photos = new ArrayList<String>();
     }
     
     public void setLastNameOnDegree(String lastNameOnDegree)
@@ -192,7 +194,7 @@ public class Member extends User implements Serializable
         return cellPhone;
     }
     
-    public void setEducation(ArrayList education)
+    public void setEducation(ArrayList<Education> education)
     {
         this.education = education;
     }
@@ -202,13 +204,13 @@ public class Member extends User implements Serializable
         return education;
     }
     
-    public void addEducation(Education education)
+    public void setPhotos(ArrayList<String> photos)
     {
-        this.education.add(education);
+        this.photos = photos;
     }
     
-    public void removeEducation(int index)
+    public ArrayList<String> getPhotos()
     {
-        this.education.remove(index);
+        return photos;
     }
 }

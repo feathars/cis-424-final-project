@@ -4,6 +4,7 @@ import java.io.Serializable;
 
 public class Education implements Serializable
 {
+    private int ID;
     private String institution;
     private String degree;
     private String major;
@@ -11,10 +12,21 @@ public class Education implements Serializable
     
     public Education()
     {
+        ID = 0;
         institution = "";
         degree = "";
         major = "";
         gradYear = "";
+    }
+    
+    public void setID(int ID)
+    {
+        this.ID = ID;
+    }
+    
+    public int getID()
+    {
+        return ID;
     }
     
     public void setInstitution(String institution)

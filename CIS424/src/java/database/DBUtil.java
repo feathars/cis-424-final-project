@@ -5,7 +5,7 @@ import java.sql.*;
 
 public class DBUtil extends HttpServlet {
 
-    public static Connection createConnection(HttpServletRequest request) {
+    /*public static Connection createConnection(HttpServletRequest request) {
         Connection connection = null;
 
         try {
@@ -25,7 +25,7 @@ public class DBUtil extends HttpServlet {
         }
 
         return connection;
-    }
+    }*/
     
     public static void closePreparedStatement(Statement ps)
     {
