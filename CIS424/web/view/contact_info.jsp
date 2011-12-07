@@ -6,12 +6,12 @@
 <%@include file="header_user.jsp" %>
 
 <h1>Contact Info</h1>
-<form action="userInfoServlet" method="post">
+<form action="<%= response.encodeURL("userInfoServlet")%>" method="post">
     <table  id="box" cellspacing="5" border="0">
         <tr>
             <td align="left" width="150">Email: </td>
             <td><input type="text" name="email" size="40"><br>
-                <font size="2">Edit email in <a href="account_info.jsp">Account Info</a></font>
+                <font size="2">Edit email in <a href="<%= response.encodeURL("account_info.jsp")%>">Account Info</a></font>
             </td>
         </tr>
         <tr>

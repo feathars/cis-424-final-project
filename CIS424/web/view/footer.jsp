@@ -5,15 +5,14 @@
 --%>
 <%@ page import="java.util.*" %>
 <% GregorianCalendar currentDate = new GregorianCalendar();
-int currentYear = currentDate.get(Calendar.YEAR);
+    int currentYear = currentDate.get(Calendar.YEAR);
 %>
 
 <div id="footer">
-                <ul id="footer">
-                    <li><a style="text-decoration: none; color: #FFFFFF" href="terms.jsp"/> Terms of Use</a> | &copy; Copyright <%= currentYear %> CPP Alumni Network</li>
-                </ul>
-            </div>
-    
-    </div>
+    <ul id="footer">
+        <li><a style="text-decoration: none; color: #FFFFFF" href="<%= response.encodeURL("terms.jsp")%>"/> Terms of Use</a> | &copy; Copyright <%= currentYear%> CPP Alumni Network</li>
+    </ul>
+</div>
+</div>
 </body>
 </html>
