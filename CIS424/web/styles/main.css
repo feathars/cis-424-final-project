@@ -124,3 +124,10 @@ background-image: -webkit-gradient(
    padding:10px;
    padding-bottom:60px;   /* Height of the footer */
 }
+
+p.error
+{
+    text-align: center;
+    color: #FF0000;
+    font-size: 15px;
+}

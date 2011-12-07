@@ -36,6 +36,14 @@
         <servlet-name>FriendDB</servlet-name>
         <servlet-class>database.FriendDB</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>LogInServlet</servlet-name>
+        <servlet-class>account.LogInServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>SignUpServlet</servlet-name>
+        <servlet-class>account.SignUpServlet</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>sql_connection_servlet</servlet-name>
         <url-pattern>/sql_connection</url-pattern>
@@ -71,6 +79,14 @@
     <servlet-mapping>
         <servlet-name>FriendDB</servlet-name>
         <url-pattern>/FriendDB</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>LogInServlet</servlet-name>
+        <url-pattern>/LogIn</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>SignUpServlet</servlet-name>
+        <url-pattern>/SignUp</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

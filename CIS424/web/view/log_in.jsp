@@ -3,9 +3,9 @@
 <br><br>
 <div id="box">
     <h2>Log In</h2>
-    <form action="" method="post">
-    <table width="100%" cellpadding="2">
-        
+    <%@include file="error.jsp" %>
+    <form action="<%= response.encodeURL(request.getContextPath() + "/LogIn")%>" method="post">
+        <table width="100%" cellpadding="2">
         <tr>
             <td class="right_align" title="Enter email">Email: </td>
             <td class="left_align"><input type="text" name="email" title="Enter password"/></td></tr>
