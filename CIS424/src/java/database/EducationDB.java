@@ -119,10 +119,10 @@ public class EducationDB
                 "from `cis424`.`EDUCATION_T` education, " +
                 "`cis424`.`USER_EDUCATION_T` userEducation " +
                 "where education.ID = userEducation.EducationID AND " +
-                "userEducation.UserID = ?;";
+                "userEducation.UserID = ?";
         try
         {        
-            connection.prepareStatement(query);
+            ps = connection.prepareStatement(query);
             ps.setInt(1, userID);
             rs = ps.executeQuery();
             ArrayList<Education> educationList = new ArrayList<Education>();

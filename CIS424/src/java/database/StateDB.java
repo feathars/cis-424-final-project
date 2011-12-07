@@ -17,7 +17,7 @@ public class StateDB
                 "OR State = ?";
         try
         {        
-            connection.prepareStatement(query);
+            ps = connection.prepareStatement(query);
             ps.setString(1, state);
             ps.setString(2, state);
             rs = ps.executeQuery();
