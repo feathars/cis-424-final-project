@@ -16,7 +16,7 @@
             <td class="left_align"><input type="text" name="email"/></td></tr>
         <tr>
             <td class="right_align"><input type="button" value="Cancel" 
-                                           onclick="window.location.href='home.jsp'" 
+                                           onclick="window.location.href=<%= response.encodeURL("home.jsp")%>" 
                                            title="Goes to Homepage"/></td>
             <td class="left_align"><input type="submit" value="Close Account"/></td>
         </tr>
