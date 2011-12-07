@@ -1,5 +1,5 @@
 <%@include file="header_intro.jsp" %>
-
+ 
 <title>Reset Password</title>
 <br><br>
 <div id="box">
