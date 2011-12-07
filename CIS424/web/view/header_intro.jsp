@@ -9,11 +9,14 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
-        <link rel="stylesheet" type="text/css" href="main.css" />
+        <link rel="stylesheet" type="text/css" href="styles/main.css" />
     </head>
         <div id="pagewidth">
             <body>
             <div id="header">
-                <img src="images/imgT.png" width="75px" style=" float: left" ></img>
-                <br><b style=" float: left; font-size:25px;" >CPP Alumni Network</b></br>
+                <a href="home.jsp"><image src="images/CPP_logoblack.gif" height="75px" style=" float: left"/></a>
+                <br>
+                <b text-decoration="none" style=" float: left; font-size:25px;">
+                    <a id="header" href="home.jsp">CPP Alumni Network</a></b>
+                </br>
             </div>
