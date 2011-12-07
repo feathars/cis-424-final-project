@@ -3,12 +3,13 @@
 <title>Reset Password</title>
 <br><br>
             <div id="box">
+                <h2>Reset Password</h2>
                 <table width="100%" >
                     <tr>
-                        <td colspan="2"><h2>Reset Password</h2></td>
+                        <td></td>
                     </tr>
                     <tr>
-                        <td colspan="2"></td>
+                        <td></td>
                     </tr>
                     <tr>
                         <td colspan="2">The password for the email, (*EMAIL*) has 
