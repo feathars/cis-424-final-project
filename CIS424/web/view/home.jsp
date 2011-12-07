@@ -11,14 +11,14 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
-        <link rel="stylesheet" type="text/css" href="<%= request.getContextPath()%>/styles/main.css" />
+        <link rel="stylesheet" type="text/css" href="<%= request.getContextPath()%>/styles/main.css"/>
     <title>CPP Alumni Network</title>
 </head>
 
 <body>
     <img class="homepageImg"
          src="<%= request.getContextPath()%>/images/CPP_logoblack.gif"
-         alt="Cal Poly Pomona Logo" />
+         alt="Cal Poly Pomona Logo"/>
     <br>
     <table class="home">
         <td>

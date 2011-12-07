@@ -13,10 +13,10 @@
         </tr>
         <tr>
             <td class="right_align"><input type="button" value="Cancel" 
-                                           onclick="window.location.href='home.jsp'" 
+                                           onclick="window.location.href='<%= response.encodeURL("home.jsp")%>'" 
                                            title="Goes to Homepage"/></td>
             <td class="left_align"><input type="button" value="Continue" 
-                                          onclick="window.location.href='close_account.jsp'" 
+                                          onclick="window.location.href='<%= response.encodeURL("close_account.jsp")%>'" 
                                           title="Goes to Homepage"/></td>
         </tr>
     </table>
