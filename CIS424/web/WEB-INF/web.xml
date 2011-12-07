@@ -32,6 +32,10 @@
         <servlet-name>RequestDB</servlet-name>
         <servlet-class>database.RequestDB</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>FriendDB</servlet-name>
+        <servlet-class>database.FriendDB</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>sql_connection_servlet</servlet-name>
         <url-pattern>/sql_connection</url-pattern>
@@ -63,6 +67,10 @@
     <servlet-mapping>
         <servlet-name>RequestDB</servlet-name>
         <url-pattern>/RequestDB</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>FriendDB</servlet-name>
+        <url-pattern>/FriendDB</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
