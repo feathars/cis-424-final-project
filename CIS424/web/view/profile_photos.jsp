@@ -1,18 +1,5 @@
-<%-- 
-    Document   : profile_photos
-    Created on : Dec 6, 2011, 1:42:10 PM
-    Author     : Administrador
---%>
-
-<%@page contentType="text/html" pageEncoding="UTF-8"%>
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Profile Photos</title>
-        <link rel="stylesheet" type="text/css" media="screen" href="styles/css.css" />
-    </head>
-    <body>
+<%@include file="header_user.jsp" %>
+<title>Profile Photos</title>
         <h1>profile_photos.jsp</h1>
         <table class="example-code" cellspacing="5" border="0" bordercolor="#000000" style="background-color:#FFFFFF" width="500" cellpadding="3" cellspacing="3">
 
@@ -54,12 +41,4 @@
 
 
             </table>
-
-
-
-
-
-
-        </div>
-    </body>
-</html>
+<%@include file="footer.jsp" %>

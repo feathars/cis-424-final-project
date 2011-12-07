@@ -1,6 +1,5 @@
 <%@include file="header_user.jsp" %>
-        <title>Personal Information</title>
-        <h1>personal_info.jsp</h1>
+        <title>Account Update - Profile Picture</title>
         <form action="userInfoServlet" method="post">
 
 <table class="example-code" border="1" bordercolor="#000000" style="background-color:#FFFFFF" width="400" cellpadding="3" cellspacing="3">
@@ -59,8 +58,5 @@
 	</tr>
 </table>
 <p style="font-family:verdana,arial,sans-serif;font-size:10px;"><a href="http://www.quackit.com/html/html_table_tutorial.cfm" target="_top">HTML Tables</a></p>
-
-
-
     </form>
         <%@include file="footer.jsp" %>
