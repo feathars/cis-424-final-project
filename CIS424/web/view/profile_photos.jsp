@@ -61,8 +61,6 @@
                     <td align="left"><img src="../images/profile_image.jpg"></td>
                     <td align="left"><img src="../images/profile_image.jpg"></td>
                 </tr>
-
-
             </table>
         </div>
 <%@include file="footer.jsp" %>
