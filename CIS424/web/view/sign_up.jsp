@@ -3,6 +3,7 @@
     <title>Sign Up</title>
     <br><br>
     <div id="box"><h2>Sign Up</h2>
+        <form action="" method="post">
         <table width="100%" cellpadding="2px"><tr><td colspan="2"></td>
             <tr><td colspan="2">* Indicates required field.</td></tr>
             <tr><td colspan="2"><!-- Please fill in the required fields.--></td> </tr>
@@ -61,7 +62,8 @@
             <tr></table>
                 <input type="button" value="Cancel" onclick="window.location.href='home.jsp'"/>
                 <input type="submit" value="sign_up" style="margin-bottom: 10px; margin-top: 10px;"/>
-             </div>
-    <br><br><br>
+    </form>  
+    </div>
+    <br><br><br><br><br><br>
     <%@include file="footer.jsp" %>
 </div>
