@@ -136,6 +136,8 @@ public class EducationDB
                 education.setDegree(rs.getString("Degree"));
                 education.setMajor(rs.getString("Major"));
                 education.setGradYear(rs.getString("GradYear"));
+                
+                educationList.add(education);
             }
             
             return educationList;

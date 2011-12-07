@@ -1,12 +1,12 @@
 package database;
 
 import java.sql.*;
-import business.User;
+import business.*;
 import java.util.ArrayList;
 
 public class PhotoDB
 {
-    public static int insert(User user, String photoURL)
+    public static int insert(User user, Photo photo)
     {
         int UserID = UserDB.selectID(user);
         
@@ -24,7 +24,7 @@ public class PhotoDB
         try
         {
             ps = connection.prepareStatement(query);
-            ps.setString(1, photoURL);
+            ps.setString(1, photo.getURL());
             ps.setInt(2, UserID);
             
             return ps.executeUpdate();
@@ -41,19 +41,19 @@ public class PhotoDB
         }
     }
     
-    public static int delete(String photoURL)
+    public static int delete(Photo photo)
     {
         ConnectionPool pool = ConnectionPool.getInstance();
         Connection connection = pool.getConnection();
         PreparedStatement ps = null;
         
         String query = "delete from `cis424`.`PHOTO_T` " +
-                    "where PhotoURL = ?";
+                    "where ID = ?";
         
         try
         {
             ps = connection.prepareStatement(query);
-            ps.setString(1, photoURL);
+            ps.setInt(1, photo.getID());
             return ps.executeUpdate();
         }
         catch(SQLException e)
@@ -68,7 +68,36 @@ public class PhotoDB
         }
     }
     
-    public static ArrayList<String> select(User user)
+    public static int update(Photo photo)
+    {
+        ConnectionPool pool = ConnectionPool.getInstance();
+        Connection connection = pool.getConnection();
+        PreparedStatement ps = null;
+        
+        String query = "update `cis424`.`PHOTO_T` set " +
+                    "URL = ?" +
+                    "where ID = ?";
+        
+        try
+        {
+            ps = connection.prepareStatement(query);
+            ps.setString(1, photo.getURL());
+            ps.setInt(2, photo.getID());
+            return ps.executeUpdate();
+        }
+        catch(SQLException e)
+        {
+            System.out.println("Error deleting photo: " + e.getLocalizedMessage());
+            return 0;
+        }
+        finally
+        {
+            DBUtil.closePreparedStatement(ps);
+            pool.freeConnection(connection);
+        }
+    }
+    
+    public static ArrayList<Photo> select(User user)
     {
         int userID = UserDB.selectID(user);
         
@@ -78,7 +107,7 @@ public class PhotoDB
         ResultSet rs = null;
         
         String query = 
-                "select PhotoURL from `cis424`.`PHOTO_T` photo, " +
+                "select ID, URL from `cis424`.`PHOTO_T` photo, " +
                 "`cis424`.`USER_PHOTO_T` userPhoto " +
                 "where photo.ID = userPhoto.PhotoID AND " +
                 "userPhoto.UserID = ?";
@@ -87,17 +116,23 @@ public class PhotoDB
             connection.prepareStatement(query);
             ps.setInt(1, userID);
             rs = ps.executeQuery();
-            ArrayList<String> photos = new ArrayList<String>();
+            ArrayList<Photo> photos = new ArrayList<Photo>();
             
             while(rs.next())
             {
-                photos.add(rs.getString("PhotoURL"));
+                Photo photo = new Photo();
+                
+                photo.setID(rs.getInt("ID"));
+                photo.setURL(rs.getString("URL"));
+                
+                photos.add(photo);
             }
             
             return photos;
         }
         catch(SQLException e)
         {
+            System.out.println("Error selecting photos: " + e.getLocalizedMessage());
             return null;
         }
         finally
