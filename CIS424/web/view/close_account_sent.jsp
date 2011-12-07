@@ -14,7 +14,7 @@
             <td>
                 <br>
                 <input type="button" value="Okay" 
-                       onclick="window.location.href='home.jsp'" 
+                       onclick="window.location.href='<%= response.encodeURL("home.jsp")%>'" 
                        title="Goes to Homepage" ></td>
         </tr>
     </table>
