@@ -58,13 +58,10 @@
                     Privacy Policy and your explicit consent to CIS department, the College of Business and the Cal Poly
                     University, Pomona to use your information for future contact regarding University events.</td></tr>
             <tr><td colspan="2" class="center_align"><input name="Accept" type="checkbox" value="Accept"</td>I Accept</tr>
-            <tr>
-                <td class="right_align"><input type="button" value="Cancel" 
-                                               onclick="window.location.href='home.jsp'" 
-                                               title="Goes to Homepage" ></td>
-                <td class="left_align"><input type="submit" value="Sign Up"></input></input></td>
-            </tr>
-        </table>    </div>
-    <br></br><br></br><br></br>
+            <tr></table>
+                <input type="button" value="Cancel" onclick="window.location.href='home.jsp'"/>
+                <input type="submit" value="sign_up" style="margin-bottom: 10px; margin-top: 10px;"/>
+             </div>
+    <br><br><br>
     <%@include file="footer.jsp" %>
 </div>

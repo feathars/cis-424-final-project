@@ -12,6 +12,7 @@
         <link rel="stylesheet" type="text/css" href="<%= request.getContextPath()%>/styles/main.css" />
         <link rel="stylesheet" type="text/css" href="<%= request.getContextPath()%>/styles/css.css" />
         <script type="text/javascript">
+        <%@include file="../scripts/scripts.jsp" %> 
             function altRows(id){
                 if(document.getElementsByTagName){  
 		
