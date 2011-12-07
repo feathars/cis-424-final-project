@@ -1,18 +1,5 @@
-<%-- 
-    Document   : profile_picture
-    Created on : Dec 5, 2011, 11:00:55 PM
-    Author     : Administrador
---%>
-
-<%@page contentType="text/html" pageEncoding="UTF-8"%>
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>personal Information</title>
-        <link rel="stylesheet" type="text/css" media="screen" href="styles/css.css" />
-    </head>
-    <body>
+<%@include file="header_user.jsp" %>
+        <title>Personal Information</title>
         <h1>personal_info.jsp</h1>
         <form action="userInfoServlet" method="post">
 
@@ -64,8 +51,10 @@
 	</tr>
 	<tr>
 		<td>&nbsp;</td>
-		<td><input type="submit" value="Cancel"></td>
-		<td><input type="submit" value="Save"></td>
+		<td>
+                    <input type="button" value="Cancel" onClick="window.location.href='<%= response.encodeURL("home.jsp")%>'"/></td>
+		<td>
+                    <input type="button" value="Save" onClick="window.location.href='<%= response.encodeURL("home.jsp")%>'"/></td>
                 <td>&nbsp;</td>
 	</tr>
 </table>
@@ -74,6 +63,4 @@
 
 
     </form>
-
-    </body>
-</html>
+        <%@include file="footer.jsp" %>
