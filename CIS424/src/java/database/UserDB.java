@@ -224,7 +224,6 @@ public class UserDB
         }
     }
     
-    //This method returns null if a record isn't found.
     public static User select(String email)
     {
         ConnectionPool pool = ConnectionPool.getInstance();

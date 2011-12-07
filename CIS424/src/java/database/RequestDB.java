@@ -114,4 +114,42 @@ public class RequestDB
             pool.freeConnection(connection);
         }
     }
+    
+    public static int selectRequestCount(User user)
+    {
+        int userID = UserDB.selectID(user);
+        
+        ConnectionPool pool = ConnectionPool.getInstance();
+        Connection connection = pool.getConnection();
+        PreparedStatement ps = null;
+        ResultSet rs = null;
+        
+        String query = 
+                "select count(SendingUserID) as 'Requests' " +
+                "from REQUEST_T reqeust, USER_T user " +
+                "where ReceivingUserID = user.ID " +
+                "and ReceivingUserID = ?";
+        try
+        {
+            ps = connection.prepareStatement(query);
+            ps.setInt(1, userID);
+            rs = ps.executeQuery();
+            ArrayList<Integer> requests = new ArrayList<Integer>();
+            
+            int requestCount = rs.getInt("Requests");
+            
+            return requestCount;
+        }
+        catch(SQLException e)
+        {
+            System.out.println("Error selecting request count: " + e.getLocalizedMessage());
+            return -1;
+        }
+        finally
+        {
+            DBUtil.closePreparedStatement(ps);
+            DBUtil.closeResultSet(rs);
+            pool.freeConnection(connection);
+        }
+    }
 }
