@@ -55,6 +55,8 @@ table.home{
  background-color: #1E4D2B;
  color: #C6930A;   
  height: 75px;
+ text-decoration: none;
+ border-style: none;
 }
 /* box used to display for the table, aligns the left column to the right*/
 #box{
@@ -90,6 +92,11 @@ table.home{
     color: #FFF;
     margin: 0;
     padding: 0;
+    text-align: center;
+    text-decoration: none;
+    list-style: none;
+    list-style-type: none;
+    border-style: none;
 /*Creates a gradient color for the footer, which is in all the pages.*/
 
 background-image: linear-gradient(bottom, #140F0F 16%, #756F6F 58%, #ADA3A3 85%);

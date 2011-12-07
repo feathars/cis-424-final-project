@@ -1,0 +1,13 @@
+Trying to add new property 'svn:ignore' with value 'build
+dist
+',
+but property already exists with value 'build
+'.
+Trying to change property 'svn:ignore' from 'build
+dist
+' to 'build
+',
+but the property has been locally changed from 'build
+dist
+' to 'build
+'.

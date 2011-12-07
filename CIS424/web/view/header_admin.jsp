@@ -27,8 +27,10 @@
                 <b style=" float: right; font-size: 25px;" >
                     <a id="header" href="profile_info.jsp"> Profile &nbsp;|</a>
                     <a id="header" href="requests.jsp">Requests &nbsp;|</a>
+                    <a id="header" href="requests.jsp">Admin &nbsp;|</a>
                     <a id="header" href="home.jsp">Log Out </a>
                 </b>
+                    
                 </b>
                 </br>
             </div>
