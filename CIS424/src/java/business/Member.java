@@ -5,7 +5,7 @@ import java.util.*;
 
 public class Member extends User implements Serializable
 {
-    private String lastNameOnDiploma;
+    private String lastNameOnDegree;
     private String gender;
     private String about;
     private String professionalSkills;
@@ -24,32 +24,32 @@ public class Member extends User implements Serializable
     
     public Member()
     {
-        lastNameOnDiploma = "";
-        gender = "";
-        about = "";
-        professionalSkills = "";
-        employer = "";
-        position = "";
-        street = "";
-        city = "";
-        state = "";
-        zip = "";
-        workWebsite = "";
-        website = "";
+        lastNameOnDegree = "NULL";
+        gender = "NULL";
+        about = "NULL";
+        professionalSkills = "NULL";
+        employer = "NULL";
+        position = "NULL";
+        street = "NULL";
+        city = "NULL";
+        state = "NULL";
+        zip = "NULL";
+        workWebsite = "NULL";
+        website = "NULL";
         lookingForJob = false;
-        homePhone = "";
-        cellPhone = "";
+        homePhone = "NULL";
+        cellPhone = "NULL";
         education = new ArrayList();
     }
     
-    public void setLastNameOnDiploma(String lastNameOnDiploma)
+    public void setLastNameOnDegree(String lastNameOnDegree)
     {
-        this.lastNameOnDiploma = lastNameOnDiploma;
+        this.lastNameOnDegree = lastNameOnDegree;
     }
     
-    public String getLastNameOnDiploma()
+    public String getLastNameOnDegree()
     {
-        return lastNameOnDiploma;
+        return lastNameOnDegree;
     }
     
     public void setGender(String gender)

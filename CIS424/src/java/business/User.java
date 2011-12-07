@@ -9,14 +9,16 @@ public class User implements Serializable
     private String firstName;
     private String lastName;
     private String email;
+    private String password;
     private String creationDate;
     
     public User()
     {
-        firstName = "";
-        lastName = "";
-        email = "";
-        creationDate = "";
+        firstName = "NULL";
+        lastName = "NULL";
+        email = "NULL";
+        password = "NULL";
+        creationDate = "NULL";
     }
     
     public void setFirstName(String firstName)
@@ -39,14 +41,24 @@ public class User implements Serializable
         return lastName;
     }
     
-    public void setEmailAddress(String email)
+    public void setEmail(String email)
     {
         this.email = email;
     }
     
-    public String getEmailAddress()
+    public String getEmail()
     {
         return email;
+    }
+    
+    public void setPassword(String password)
+    {
+        this.password = password;
+    }
+    
+    public String getPassword()
+    {
+        return password;
     }
     
     public String getCreationDateAsString()
