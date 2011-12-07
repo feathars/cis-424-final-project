@@ -11,22 +11,22 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
-        <link rel="stylesheet" type="text/css" href="styles/main.css" />
+        <link rel="stylesheet" type="text/css" href="<%= request.getContextPath()%>/styles/main.css" />
     <title>CPP Alumni Network</title>
 </head>
 
-<body>       
+<body>
     <img class="homepageImg"
-         src="images/CPP_logoblack.gif"
+         src="<%= request.getContextPath()%>/images/CPP_logoblack.gif"
          alt="Cal Poly Pomona Logo" />
     <br>
     <table class="home">
         <td>
-            <a href="log_in.jsp">Log In</a>
+            <a href="<%= response.encodeURL("log_in.jsp") %>">Log In</a>
         </td>
         <td> | </td>
         <td>
-            <a href="sign_up.jsp">Sign Up</a>
+            <a href="<%= response.encodeURL("sign_up.jsp") %>">Sign Up</a>
         </td>
     </table>
     </body>

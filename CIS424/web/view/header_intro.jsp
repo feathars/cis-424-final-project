@@ -9,12 +9,12 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
-        <link rel="stylesheet" type="text/css" href="styles/main.css" />
+        <link rel="stylesheet" type="text/css" href="<%= request.getContextPath()%>/styles/main.css" />
     </head>
         <div id="pagewidth">
             <body>
             <div id="header">
-                <a href="home.jsp"><image src="images/CPP_logoblack.gif" height="75px" style=" float: left"/></a>
+                <a href="home.jsp"><image src="<%= request.getContextPath()%>/images/CPP_logoblack.gif" height="75px" style=" float: left"/></a>
                 <br>
                 <b text-decoration="none" style=" float: left; font-size:25px;">
                     <a id="header" href="home.jsp">CPP Alumni Network</a></b>

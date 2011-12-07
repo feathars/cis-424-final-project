@@ -3,49 +3,34 @@
     Created on : Dec 5, 2011, 11:59:37 PM
     Author     : Administrador
 --%>
+<%@include file="header_user.jsp" %>
 
-
-<%@page contentType="text/html" pageEncoding="UTF-8"%>
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>contact Information</title>
-        <link rel="stylesheet" type="text/css" media="screen" href="styles/css.css" />
-    </head>
-    <body>
-        <h1>contact_info.jsp</h1>
-        <form action="userInfoServlet" method="post">
-    <table  class="example-code" cellspacing="5" border="0">
+<h1>Contact Info</h1>
+<form action="userInfoServlet" method="post">
+    <table  id="box" cellspacing="5" border="0">
         <tr>
             <td align="left" width="150">Email: </td>
-            <td><input type="text" name="email" size="50"><br>
-                Edit email in <a href="#">Account Info</a>
+            <td><input type="text" name="email" size="40"><br>
+                <font size="2">Edit email in <a href="account_info.jsp">Account Info</a></font>
             </td>
         </tr>
         <tr>
             <td align="left">Home Phone: </td>
-            <td><input type="text" name="homePhone" size="50"></td>
+            <td><input type="text" name="homePhone" size="40"></td>
         </tr>
         <tr>
-            <td align="left">Cel Phone: </td>
-            <td><input type="text" name="celPhone" size="50"></td>
+            <td align="left">Cell Phone: </td>
+            <td><input type="text" name="celPhone" size="40"></td>
         </tr>
         <tr>
             <td align="left">Website: </td>
-            <td><input type="text" name="website" size="50"></td>
-        </tr>
-
-        <tr>
-            <td colspan="2">&nbsp;</td>
-            
+            <td><input type="text" name="website" size="40"></td>
         </tr>
         <tr>
             <td>&nbsp;</td>
             <td><br><input type="submit" value="Cancel"><input type="submit" value="Save"></td>
         </tr>
     </table>
-    </form>
+</form>
 
-    </body>
-</html>
+<%@include file="footer.jsp" %>
