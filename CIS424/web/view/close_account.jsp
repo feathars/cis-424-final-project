@@ -8,6 +8,7 @@
             <td colspan="2">Enter users email address to close account.</td>
         </tr>    
         <tr><td colspan="2">
+                <%@include file="error.jsp" %>
                 <!-- The email you entered was not in the database.-->
             </td></tr>
 
