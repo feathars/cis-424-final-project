@@ -10,7 +10,7 @@
                 <td colspan="2">Enter users email address to reset password.</td>
             </tr>
             <tr><td colspan="2">
-                    <!-- The email address you entered was not in the database. -->
+                    <%@include file="error.jsp" %><!-- The email address you entered was not in the database. -->
                 </td>
             </tr>
             <tr>

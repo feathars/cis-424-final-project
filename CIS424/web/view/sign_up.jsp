@@ -6,7 +6,7 @@
         <form action="" method="post">
         <table width="100%" cellpadding="2px"><tr><td colspan="2"></td>
             <tr><td colspan="2">* Indicates required field.</td></tr>
-            <tr><td colspan="2"><!-- Please fill in the required fields.--></td> </tr>
+            <tr><td colspan="2"><%@include file="error.jsp" %><!-- Please fill in the required fields.--></td> </tr>
             <tr>
                 <td class="left_align">First Name * </td>
                 <td class="right_align"><input type="text" name="first_name" size="25"></input></td>
