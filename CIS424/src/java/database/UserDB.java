@@ -184,8 +184,8 @@ public class UserDB
         PreparedStatement ps = null;
         ResultSet rs = null;
         
-        String query = "SELECT * FROM User " +
-                       "WHERE EmailAddress = ?";
+        String query = "select * from User " +
+                       "where Email = ?";
         try
         {
             ps = connection.prepareStatement(query);
@@ -194,13 +194,51 @@ public class UserDB
             User user = null;
             if (rs.next())
             {
-                user = new User();
-                
+                if (rs.getInt("ID") == 1)
+                {
+                    Member member = new Member();
+                    
+                    member.setFirstName(rs.getString("FirstName"));
+                    member.setLastName(rs.getString("LastName"));
+                    member.setLastNameOnDegree(rs.getString("LastNameOnDegree"));
+                    member.setGender(rs.getString("Gender"));
+                    member.setAbout(rs.getString("About"));
+                    member.setProfessionalSkills(rs.getString("ProfessionalSkills"));
+                    member.setEmployer(rs.getString("Employer"));
+                    member.setPostition(rs.getString("Position"));
+                    member.setStreet(rs.getString("Street"));
+                    member.setCity(rs.getString("City"));
+                    member.setState(rs.getString("State"));
+                    member.setZip(rs.getString("Zip"));
+                    member.setWorkWebsite(rs.getString("WorkWebsite"));
+                    member.setWebsite(rs.getString("Website"));
+                    member.setLookingForJob(rs.getBoolean("LookingForJob"));
+                    member.setEmail(rs.getString("Email"));
+                    member.setHomePhone(rs.getString("HomePhone"));
+                    member.setCellPhone(rs.getString("CellPhone"));
+                    member.setPassword(rs.getString("Password"));
+                    member.setCreationDateWithDate(rs.getDate("CreationDate"));
+                    
+                    user = member;
+                }
+                else
+                {
+                    Admin admin = new Admin();
+                    
+                    admin.setFirstName(rs.getString("FirstName"));
+                    admin.setLastName(rs.getString("LastName"));
+                    admin.setEmail(rs.getString("Email"));
+                    admin.setPassword(rs.getString("Password"));
+                    admin.setCreationDateWithDate(rs.getDate("CreationDate"));
+                    
+                    user = admin;
+                }
             }
             return user;
         }
-        catch (SQLException e){
-            e.printStackTrace();
+        catch (SQLException e)
+        {
+            System.out.println("Error selecting user.");
             return null;
         }        
         finally
