@@ -1,4 +1,4 @@
-<script>
+<script type="text/javascript">
     function altRows(id){
         if(document.getElementsByTagName){  
 		
