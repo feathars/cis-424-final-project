@@ -1,16 +1,16 @@
 <%@include file="header_user.jsp" %>
 <title>Account Update - Profile Picture</title>
-<script type="text/javascript" src="../scripts/index.js"></script>
-<script type="text/javascript" src="../scripts/demo.js"></script>
-<script type="text/javascript" src="../scripts/jquery.color.js"></script>
-<script type="text/javascript" src="../scripts/jquery-1.4.1.js"></script>
-<script type="text/javascript" src="../scripts/jquery-ui-1.7.2.min.js"></script>
+<script type="text/javascript" src="<%= request.getContextPath()%>/scripts/index.js"></script>
+<script type="text/javascript" src="<%= request.getContextPath()%>/scripts/demo.js"></script>
+<script type="text/javascript" src="<%= request.getContextPath()%>/scripts/jquery.color.js"></script>
+<script type="text/javascript" src="<%= request.getContextPath()%>/scripts/jquery-1.4.1.js"></script>
+<script type="text/javascript" src="<%= request.getContextPath()%>/scripts/jquery-ui-1.7.2.min.js"></script>
 
-<link rel="stylesheet" type="text/css" href="../styles/demo.css" />
-<link rel="stylesheet" type="text/css" href="../styles/index.css" />
+<link rel="stylesheet" type="text/css" href="<%= request.getContextPath()%>/styles/demo.css" />
+<link rel="stylesheet" type="text/css" href="<%= request.getContextPath()%>/styles/index.css" />
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
-<link rel="stylesheet" type="text/css" media="screen" href="../styles/css.css" />
+<link rel="stylesheet" type="text/css" media="screen" href="<%= request.getContextPath()%>/styles/css.css" />
 <title>Profile Information</title>
 
 <center>
@@ -34,7 +34,7 @@
                         <table border="0" bordercolor="#000000" style="background-color:#FFFFFF" width="400" cellpadding="3" cellspacing="3">
                             <tr>
                                 <td rowspan="2" >
-                                    <img src="../images/profile_image.jpg"><br></td>
+                                    <img src="<%= request.getContextPath()%>/images/profile_image.jpg"><br></td>
                                 <td style="margin:0;"><p>Current File: Me.jpg</p></td>
                                 <td>&nbsp;</td>
                                 <td>&nbsp;</td>
@@ -47,7 +47,7 @@
                             </tr>
 
                             <tr>
-                                <td rowspan="2"><img src="../images/profile_image.jpg"><br></td>
+                                <td rowspan="2"><img src="<%= request.getContextPath()%>/images/profile_image.jpg"><br></td>
                                 <td>No file selected:</td>
                                 <td>&nbsp;</td>
                                 <td>&nbsp;</td>
@@ -60,7 +60,7 @@
                             </tr>
 
                             <tr>
-                                <td rowspan="2"><img src="../images/profile_image.jpg"><br></td>
+                                <td rowspan="2"><img src="<%= request.getContextPath()%>/images/profile_image.jpg"><br></td>
                                 <td>No File Sected: </td>
                                 <td>&nbsp;</td>
                                 <td>&nbsp;</td>
