@@ -5,7 +5,7 @@
 --%>
 
 <%@page contentType="text/html" pageEncoding="windows-1252"%>
-<select name="graduation_year">
+<select name="gradYear">
 	<option> - Year - </option>
 	<option value="2010">2010</option>
 	<option value="2009">2009</option>
