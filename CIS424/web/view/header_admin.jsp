@@ -29,7 +29,7 @@
 
                 <b style=" float: right; font-size: 25px;" >
                     <a class="header" href="requests.jsp">Admin Home</a> &nbsp;|
-                    <a class="header" href="home.jsp">Log Out </a>
+                    <a class="header" href="home.jsp">Log Out&nbsp;&nbsp;</a>
                 </b>
                 </br>
             </div>
