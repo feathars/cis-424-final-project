@@ -22,11 +22,11 @@
     <br>
     <table class="home">
         <td>
-            <a href="<%= response.encodeURL("log_in.jsp") %>">Log In</a>
+            <a href="<%= response.encodeURL(request.getContextPath() + "/view/log_in.jsp") %>">Log In</a>
         </td>
         <td> | </td>
         <td>
-            <a href="<%= response.encodeURL("sign_up.jsp") %>">Sign Up</a>
+            <a href="<%= response.encodeURL(request.getContextPath() + "/view/sign_up.jsp") %>">Sign Up</a>
         </td>
     </table>
     </body>

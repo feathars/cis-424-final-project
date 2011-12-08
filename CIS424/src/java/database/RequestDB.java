@@ -134,8 +134,7 @@ public class RequestDB
             ps = connection.prepareStatement(query);
             ps.setInt(1, userID);
             rs = ps.executeQuery();
-            ArrayList<Integer> requests = new ArrayList<Integer>();
-            
+            rs.next();
             int requestCount = rs.getInt("Requests");
             
             return requestCount;

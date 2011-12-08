@@ -22,7 +22,7 @@
 
                 <div id="content">
                     <div id="tab-container">
-                        <ul> <%--url encode completed --%>
+                        <ul>
                             <li class="selected"><a href="<%= response.encodeURL("personal_information.jsp")%>">Personal Info</a></li>
                             <li><a href="<%= response.encodeURL("work_information.jsp")%>">Work Info</a></li>
                             <li><a href="<%= response.encodeURL("profile_picture.jsp")%>">Profile Picture</a></li>
@@ -85,6 +85,6 @@
     </table>
 </center>
 
-</body>
+<%@include file="footer.jsp" %>
 
 

@@ -52,6 +52,10 @@
         <servlet-name>ForgotPasswordServlet</servlet-name>
         <servlet-class>account.ForgotPasswordServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>LogOutServlet</servlet-name>
+        <servlet-class>account.LogOutServlet</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>sql_connection_servlet</servlet-name>
         <url-pattern>/sql_connection</url-pattern>
@@ -104,9 +108,13 @@
         <servlet-name>ForgotPasswordServlet</servlet-name>
         <url-pattern>/ForgotPassword</url-pattern>
     </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>LogOutServlet</servlet-name>
+        <url-pattern>/LogOut</url-pattern>
+    </servlet-mapping>
     <session-config>
         <session-timeout>
-            30
+            1800
         </session-timeout>
     </session-config>
     <welcome-file-list>
