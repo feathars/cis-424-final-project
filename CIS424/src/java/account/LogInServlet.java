@@ -11,12 +11,19 @@ public class LogInServlet extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException
     {
+        HttpSession session = request.getSession();
+        String error = "";
+        
         String email = request.getParameter("email");
         String password = request.getParameter("password");
-        String error = "";
-        User user = null;
         
-        boolean userExists = UserDB.emailExists(email); //Check if the users email exists in the database
+        User user = null;
+        boolean userExists = false;
+        
+        if (email != null)
+            userExists = UserDB.emailExists(email); //Check if the users email exists in the database
+        else
+            error = "You must enter an email address";
         
         if (userExists) //If it exists, check if the email and password match
         {
@@ -35,8 +42,6 @@ public class LogInServlet extends HttpServlet {
         
         if (error.equals(""))
         {
-            HttpSession session = request.getSession();
-
             synchronized (session)
             {
                 session.setAttribute("user", user);
