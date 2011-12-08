@@ -1,12 +1,16 @@
 package account;
 
 import java.io.*;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import javax.mail.MessagingException;
 import javax.servlet.*;
 import javax.servlet.http.*;
 import business.*;
 import database.EducationDB;
 import database.UserDB;
 import java.util.ArrayList;
+import utilities.MailUtil;
 import utilities.ValidationUtil;
 
 public class SignUpServlet extends HttpServlet {
@@ -66,6 +70,20 @@ public class SignUpServlet extends HttpServlet {
                 EducationDB.insert(member, education);
                 
                 session.setAttribute("user", member);
+            }
+            try
+            {
+                String subject = "Welcome to the CPP Alumni Network!";
+                String body ="Hi " + firstName + ",\n\n" +
+                        "Thank you for signing up to the CPP Alumni Network. Now you can connect " +
+                        "with all of your old school friends and never miss a beat. Don't forget that your " +
+                        "password is " + password + ".\n\n" +
+                        "- Team at the CPP Alumni Network";
+                MailUtil.sendMail(email, subject, body, false);
+            }
+            catch (MessagingException ex)
+            {
+                System.out.println("Error sending email: " + ex.getLocalizedMessage());
             }
 
             String url = response.encodeURL("/view/personal_information.jsp");
