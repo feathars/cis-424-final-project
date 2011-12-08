@@ -5,14 +5,14 @@
 --%>
 <%@include file="/view/header_user.jsp" %>
 <title>Education</title>
-<script type="text/javascript" src="../scripts/index.js"></script>
-<script type="text/javascript" src="../scripts/demo.js"></script>
-<script type="text/javascript" src="../scripts/jquery.color.js"></script>
-<script type="text/javascript" src="../scripts/jquery-1.4.1.js"></script>
-<script type="text/javascript" src="../scripts/jquery-ui-1.7.2.min.js"></script>
+<script type="text/javascript" src="<%= request.getContextPath()%>/scripts/index.js"></script>
+<script type="text/javascript" src="<%= request.getContextPath()%>/scripts/demo.js"></script>
+<script type="text/javascript" src="<%= request.getContextPath()%>/scripts/jquery.color.js"></script>
+<script type="text/javascript" src="<%= request.getContextPath()%>/scripts/jquery-1.4.1.js"></script>
+<script type="text/javascript" src="<%= request.getContextPath()%>/scripts/jquery-ui-1.7.2.min.js"></script>
 
-<link rel="stylesheet" type="text/css" href="../styles/demo.css" />
-<link rel="stylesheet" type="text/css" href="../styles/index.css" />
+<link rel="stylesheet" type="text/css" href="<%= request.getContextPath()%>/styles/demo.css" />
+<link rel="stylesheet" type="text/css" href="<%= request.getContextPath()%>/styles/index.css" />
 
 <center>
     <table align="center" border="0">
@@ -21,12 +21,12 @@
                 <div id="content">
                     <div id="tab-container">
                         <ul>
-                            <li><a href="personal_information.jsp">Personal Info</a></li>
-                            <li><a href="work_information.jsp">Work Info</a></li>
-                            <li><a href="profile_picture.jsp">Profile Picture</a></li>
-                            <li><a href="contact_info.jsp">Contact Info</a></li>
-                            <li class="selected"><a href="education.jsp">Education</a></li>
-                            <li><a href="account_info.jsp">Account Info</a></li>
+                            <li><a href="<%= request.getContextPath()%>personal_information.jsp">Personal Info</a></li>
+                            <li><a href="<%= request.getContextPath()%>work_information.jsp">Work Info</a></li>
+                            <li><a href="<%= request.getContextPath()%>profile_picture.jsp">Profile Picture</a></li>
+                            <li><a href="<%= request.getContextPath()%>contact_info.jsp">Contact Info</a></li>
+                            <li class="selected"><a href="<%= request.getContextPath()%>education.jsp">Education</a></li>
+                            <li><a href="<%= request.getContextPath()%>account_info.jsp">Account Info</a></li>
                         </ul>
                     </div>
 
