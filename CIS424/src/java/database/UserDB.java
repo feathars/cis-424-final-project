@@ -200,6 +200,37 @@ public class UserDB
         }
     }
     
+    public static String selectPassword(String email)
+    {
+        ConnectionPool pool = ConnectionPool.getInstance();
+        Connection connection = pool.getConnection();
+        PreparedStatement ps = null;
+        ResultSet rs = null;
+        
+        String query = "select Password from `cis424`.`USER_T` " +
+                "where email = ?";
+        try
+        {
+            ps = connection.prepareStatement(query);
+            ps.setString(1, email);
+            rs = ps.executeQuery();
+            rs.next();
+            String password = rs.getString("Password");
+            return password;
+        }
+        catch(SQLException e)
+        {
+            System.out.println("Error finding password: " + e.getLocalizedMessage());
+            return null;
+        }
+        finally
+        {
+            DBUtil.closeResultSet(rs);
+            DBUtil.closePreparedStatement(ps);
+            pool.freeConnection(connection);
+        }
+    }
+    
     public static int selectID(User user)
     {
         ConnectionPool pool = ConnectionPool.getInstance();
