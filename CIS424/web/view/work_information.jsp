@@ -8,7 +8,7 @@
 <center>
     <table align="center" border="0">
         <tr><td>
-
+                <br>
                 <h1 align="center">Work Information</h1>
                 <div id="content">
                     <div id="tab-container">
@@ -119,7 +119,7 @@
                                     <td align="left">&nbsp;</td>
                                     <td align="left"><input type=checkbox NAME="job">Looking for a new job</td>
                                 </tr>        
-                                
+
                                 <tr>
                                     <td>&nbsp;</td>
                                     <td><br><input type="submit" value="Cancel"><input type="submit" value="Save"></td>
