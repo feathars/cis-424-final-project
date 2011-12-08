@@ -22,31 +22,29 @@
 
                 <div id="content">
                     <div id="tab-container">
-                        <ul>
-                            <li><a href="personal_information.jsp">Personal Info</a></li>
-                            <li><a href="work_information.jsp">Work Info</a></li>
-                            <li><a href="profile_picture.jsp">Profile Picture</a></li>
-                            <li><a href="contact_info.jsp">Contact Info</a></li>
-                            <li><a href="education.jsp">Education</a></li>
-                            <li  class="selected"><a href="account_info.jsp">Account Info</a></li>
+                        <ul> <%--url encode completed --%>
+                            <li><a href="<%= response.encodeURL("personal_information.jsp")%>">Personal Info</a></li>
+                            <li><a href="<%= response.encodeURL("work_information.jsp")%>">Work Info</a></li>
+                            <li><a href="<%= response.encodeURL("profile_picture.jsp")%>">Profile Picture</a></li>
+                            <li><a href="<%= response.encodeURL("contact_info.jsp")%>">Contact Info</a></li>
+                            <li><a href="<%= response.encodeURL("education.jsp")%>">Education</a></li>
+                            <li class="selected"><a href="<%= response.encodeURL("account_info.jsp")%>">Account Info</a></li>
                         </ul>
                     </div>
-
-
                     <div id="main-container">
                         <form action="<%= response.encodeURL("userInfoServlet")%>" method="post">
-                            <table  class="example-code" cellspacing="5" border="0" style="margin: auto;">
+                            <table cellspacing="5" border="0">
                                 <tr>
-                                    <td align="left" width="150">Email: </td>
-                                    <td><input type="text" name="email" size="40"></td>
+                                    <td align="left">Email: </td>
+                                    <td><input type="text" name="email" size="50"/></td>
                                 </tr>
                                 <tr>
                                     <td align="left">New Password: </td>
-                                    <td><input type="text" name="newPassword" size="40"></td>
+                                    <td><input type="text" name="newPassword" size="50"/></td>
                                 </tr>
                                 <tr>
                                     <td align="left">Confirm New Password: </td>
-                                    <td><input type="text" name="confirmNewPassword" size="40"></td>
+                                    <td><input type="text" name="confirmNewPassword" size="50"/></td>
                                 </tr>
                                 <tr>
                                     <td align="left">Account Deletion: </td>
@@ -58,7 +56,6 @@
                                 </tr>
                             </table>
                         </form>
-
                     </div>
                 </div>
                 <%-- code to complete table. this table centers the entire content.--%>
@@ -66,7 +63,4 @@
         </tr>
     </table>
 </center>
-
 </body>
-
-
