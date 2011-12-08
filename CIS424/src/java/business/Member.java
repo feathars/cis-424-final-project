@@ -25,21 +25,21 @@ public class Member extends User implements Serializable
     
     public Member()
     {
-        lastNameOnDegree = "NULL";
-        gender = "NULL";
-        about = "NULL";
-        professionalSkills = "NULL";
-        employer = "NULL";
-        position = "NULL";
-        street = "NULL";
-        city = "NULL";
-        state = "NULL";
-        zip = "NULL";
-        workWebsite = "NULL";
-        website = "NULL";
+        lastNameOnDegree = "";
+        gender = "";
+        about = "";
+        professionalSkills = "";
+        employer = "";
+        position = "";
+        street = "";
+        city = "";
+        state = "";
+        zip = "";
+        workWebsite = "";
+        website = "";
         lookingForJob = false;
-        homePhone = "NULL";
-        cellPhone = "NULL";
+        homePhone = "";
+        cellPhone = "";
         education = new ArrayList<Education>();
         photos = new ArrayList<String>();
     }
@@ -202,6 +202,11 @@ public class Member extends User implements Serializable
     public ArrayList getEducation()
     {
         return education;
+    }
+    
+    public void addEducation(Education education)
+    {
+        this.education.add(education);
     }
     
     public void setPhotos(ArrayList<String> photos)

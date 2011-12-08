@@ -65,7 +65,7 @@ a.header, a.header:visited, a.header:hover
     height: 75px;
     text-decoration: none;
     border-style: none;
-    
+    font-family: none;
 }
 /* box used to display for the table, aligns the left column to the right*/
 #box{

@@ -11,7 +11,10 @@ public class UserDB
     {
         DateFormat dateFormat = new SimpleDateFormat("mm/dd/yyyy hh:mm:ss");
         String creationDate = dateFormat.format(new Date());
-        int StateID = StateDB.selectID(member.getState()); //Get StateID from STATE_T
+        int StateID = -1;
+        
+        if (member.getState() != null || !member.getState().equals("") || !member.getState().equals("NULL"))
+            StateID = StateDB.selectID(member.getState()); //Get StateID from STATE_T
         
         ConnectionPool pool = ConnectionPool.getInstance();
         Connection connection = pool.getConnection();
@@ -20,40 +23,45 @@ public class UserDB
         String query =
                 "insert into `cis424`.`USER_T` (UserTypeID, FirstName, LastName, LastNameOnDegree, " + 
                 "Gender, About, ProfessionalSkills, Employer, Position, Street, " +
-                "City, StateID, Zip, WorkWebsite, Website, LookingForJob, HomePhone, CellPhone, " +
+                "City, StateID, Zip, WorkWebsite, Website, LookingForJob, Email, HomePhone, CellPhone, " +
                 "Password, CreationDate)" +
-                "values (1, ?, ?, ?, ?, " +
+                "values (?, ?, ?, ?, ?, " +
                 "?, ?, ?, ?, ?, ?, ?, ?, " +
                 "?, ?, ?, ?, ?, ?, ?, ?)";
         
         try
         {     
             ps = connection.prepareStatement(query);
-            ps.setString(1, member.getFirstName());
-            ps.setString(2, member.getLastName());
-            ps.setString(3, member.getLastNameOnDegree());
-            ps.setString(4, member.getGender());
-            ps.setString(5, member.getAbout());
-            ps.setString(6, member.getProfessionalSkills());
-            ps.setString(7, member.getEmployer());
-            ps.setString(8, member.getPosition());
-            ps.setString(9, member.getStreet());
-            ps.setString(10, member.getCity());
-            ps.setInt(11, StateID);
-            ps.setString(12, member.getZip());
-            ps.setString(13, member.getWorkWebsite());
-            ps.setString(14, member.getWebsite());
-            ps.setBoolean(15, member.getLookingForJob());
-            ps.setString(16, member.getEmail());
-            ps.setString(17, member.getHomePhone());
-            ps.setString(18, member.getCellPhone());
-            ps.setString(19, member.getPassword());
-            ps.setString(20, creationDate);
+            ps.setInt(1, 1);
+            ps.setString(2, member.getFirstName());
+            ps.setString(3, member.getLastName());
+            ps.setString(4, member.getLastNameOnDegree());
+            ps.setString(5, member.getGender());
+            ps.setString(6, member.getAbout());
+            ps.setString(7, member.getProfessionalSkills());
+            ps.setString(8, member.getEmployer());
+            ps.setString(9, member.getPosition());
+            ps.setString(10, member.getStreet());
+            ps.setString(11, member.getCity());
+            if (StateID == -1)
+                ps.setString(12, null);
+            else
+                ps.setInt(12, StateID);
+            ps.setString(13, member.getZip());
+            ps.setString(14, member.getWorkWebsite());
+            ps.setString(15, member.getWebsite());
+            ps.setBoolean(16, member.getLookingForJob());
+            ps.setString(17, member.getEmail());
+            ps.setString(18, member.getHomePhone());
+            ps.setString(19, member.getCellPhone());
+            ps.setString(20, member.getPassword());
+            ps.setString(21, creationDate);
             
             return ps.executeUpdate();
         }
         catch(SQLException e)
         {
+            System.out.println("Error inserting user: " + e.getLocalizedMessage());
             return 0;
         }
         finally
