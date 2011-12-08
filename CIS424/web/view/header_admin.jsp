@@ -22,7 +22,7 @@
                 <b text-decoration="none" style=" float: left; font-size:25px;">
                     <a class="header" href="<%= response.encodeURL("admin_home.jsp")%>">&nbsp;&nbsp;CPP Alumni Network</a></b>
                 <b style=" float: left; font-size: 25px;">
-                    &nbsp;&nbsp;&nbsp;&nbsp;Search &nbsp;</b> 
+                    &nbsp;&nbsp;&nbsp;&nbsp;<font style="font-family: none">Search</font>&nbsp;</b> 
                 <b style=" float: left; font-size:25px;">
                     <input type="text" value=""/>&nbsp;
                     <a class="header" href="dummy.jsp" text>Go</a></b>

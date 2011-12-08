@@ -14,11 +14,11 @@ public class User implements Serializable
     
     public User()
     {
-        firstName = "NULL";
-        lastName = "NULL";
-        email = "NULL";
-        password = "NULL";
-        creationDate = "NULL";
+        firstName = "";
+        lastName = "";
+        email = "";
+        password = "";
+        creationDate = "";
     }
     
     public void setFirstName(String firstName)

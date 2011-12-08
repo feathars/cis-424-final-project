@@ -8,18 +8,13 @@ public class EducationDB
 {
     public static int insert(User user, Education education)
     {
-        int UserID = UserDB.selectID(user);
+        int userID = UserDB.selectID(user);
         
         ConnectionPool pool = ConnectionPool.getInstance();
         Connection connection = pool.getConnection();
         PreparedStatement ps = null;
         
-        String query = "START TRANSACTION; " +
-                    "SET autocommit = 0; " +
-                    "insert into `cis424`.`EDUCATION_T` (Institution, Degree, Major, GradYear) values (?, ?, ?, ?); " +
-                    "insert into `cis424`.`USER_EDUCATION_T` (UserID, EducationID) values (?, (select last_insert_id())); " +
-                    "COMMIT;" +
-                    "SET autocommit = 1;";
+        String query = "insert into `cis424`.`EDUCATION_T` (Institution, Degree, Major, GradYear) values (?, ?, ?, ?)";
         
         try
         {
@@ -28,13 +23,41 @@ public class EducationDB
             ps.setString(2, education.getDegree());
             ps.setString(3, education.getMajor());
             ps.setString(4, education.getGradYear());
-            ps.setInt(5, UserID);
             
             return ps.executeUpdate();
         }
         catch(SQLException e)
         {
             System.out.println("Error inserting education: " + e.getLocalizedMessage());
+            return 0;
+        }
+        finally
+        {
+            DBUtil.closePreparedStatement(ps);
+            pool.freeConnection(connection);
+            
+            relateUserEducation(userID);
+        }
+    }
+    
+    public static int relateUserEducation(int userID)
+    {
+        ConnectionPool pool = ConnectionPool.getInstance();
+        Connection connection = pool.getConnection();
+        PreparedStatement ps = null;
+        
+        String query = "insert into `cis424`.`USER_EDUCATION_T` (UserID, EducationID) values (?, (select last_insert_id()))";
+        
+        try
+        {
+            ps = connection.prepareStatement(query);
+            ps.setInt(1, userID);
+            
+            return ps.executeUpdate();
+        }
+        catch(SQLException e)
+        {
+            System.out.println("Error relating users education: " + e.getLocalizedMessage());
             return 0;
         }
         finally
