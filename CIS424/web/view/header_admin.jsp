@@ -16,20 +16,20 @@
     <body>
         <div id="pagewidth">
 
-            <div id="header">
+            <div class="head">
                 <a href="<%= response.encodeURL("admin_home.jsp")%>"><image src="<%= request.getContextPath()%>/images/CPP_logoblack.gif" height="65px" style="float: left; padding-left: 5px; padding-top: 5px;"/></a>
                 <br>
                 <b text-decoration="none" style=" float: left; font-size:25px;">
-                    <a id="header" href="<%= response.encodeURL("admin_home.jsp")%>">&nbsp;&nbsp;CPP Alumni Network</a></b>
+                    <a class="header" href="<%= response.encodeURL("admin_home.jsp")%>">&nbsp;&nbsp;CPP Alumni Network</a></b>
                 <b style=" float: left; font-size: 25px;">
                     &nbsp;&nbsp;&nbsp;&nbsp;Search &nbsp;</b> 
                 <b style=" float: left; font-size:25px;">
                     <input type="text" value=""/>&nbsp;
-                    <a id="header" href="dummy.jsp" text>Go</a></b>
+                    <a class="header" href="dummy.jsp" text>Go</a></b>
 
                 <b style=" float: right; font-size: 25px;" >
-                    <a id="header" href="requests.jsp">Admin Home</a> &nbsp;|
-                    <a id="header" href="home.jsp">Log Out </a>
+                    <a class="header" href="requests.jsp">Admin Home</a> &nbsp;|
+                    <a class="header" href="home.jsp">Log Out </a>
                 </b>
                 </br>
             </div>
