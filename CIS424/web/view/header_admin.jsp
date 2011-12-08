@@ -8,6 +8,28 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <%@page import="database.RequestDB" %>
+        <%@page import="business.User" %>
+        <% int count = -1;
+           String error = "You must be logged in to view that page."; 
+           if (request.isRequestedSessionIdValid() == false)
+           { %>
+                <%= "<script type='text/javascript'>\nwindow.location = '" + request.getContextPath() + "/view/log_in.jsp?error=" + error + "'\n</script>" %>
+        <% }
+           else
+           {
+            try
+            {
+                User user = (User)session.getAttribute("user");
+                count = RequestDB.selectRequestCount(user); 
+            }
+            catch(NullPointerException e)
+            { %>
+                <%= "<script type='text/javascript'>\nwindow.location = '" + request.getContextPath() + "/view/log_in.jsp?error=" + error + "'\n</script>" %>
+           <% }                                           
+           }
+        %>
+        
         <meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
         <link rel="stylesheet" type="text/css" href="<%= request.getContextPath()%>/styles/main.css" />
         <link rel="stylesheet" type="text/css" href="<%= request.getContextPath()%>/styles/css.css" />
@@ -17,19 +39,19 @@
         <div id="pagewidth">
 
             <div class="head">
-                <a href="<%= response.encodeURL("admin_home.jsp")%>"><image src="<%= request.getContextPath()%>/images/CPP_logoblack.gif" height="65px" style="float: left; padding-left: 5px; padding-top: 5px;"/></a>
+                <a href="<%= response.encodeURL(request.getContextPath() + "/view/admin_home.jsp")%>"><image src="<%= request.getContextPath()%>/images/CPP_logoblack.gif" height="65px" style="float: left; padding-left: 5px; padding-top: 5px;"/></a>
                 <br>
                 <b text-decoration="none" style=" float: left; font-size:25px;">
-                    <a class="header" href="<%= response.encodeURL("admin_home.jsp")%>">&nbsp;&nbsp;CPP Alumni Network</a></b>
+                    <a class="header" href="<%= response.encodeURL(request.getContextPath() + "/view/admin_home.jsp")%>">&nbsp;&nbsp;CPP Alumni Network</a></b>
                 <b style=" float: left; font-size: 25px;">
                     &nbsp;&nbsp;&nbsp;&nbsp;<font style="font-family: none">Search</font>&nbsp;</b> 
                 <b style=" float: left; font-size:25px;">
                     <input type="text" value=""/>&nbsp;
-                    <a class="header" href="dummy.jsp" text>Go</a></b>
+                    <a class="header" href="<%= response.encodeURL(request.getContextPath() + "/view/search_results.jsp")%>" text>Go</a></b>
 
                 <b style=" float: right; font-size: 25px;" >
-                    <a class="header" href="requests.jsp">Admin Home</a> &nbsp;|
-                    <a class="header" href="home.jsp">Log Out&nbsp;&nbsp;</a>
+                    <a class="header" href="<%= response.encodeURL(request.getContextPath() + "/view/admin_home.jsp")%>">Admin Home</a> &nbsp;|
+                    <a class="header" href="<%= response.encodeURL(request.getContextPath() + "/LogOut")%>">Log Out&nbsp;&nbsp;</a>
                 </b>
                 </br>
             </div>
