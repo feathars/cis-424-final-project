@@ -8,7 +8,7 @@
 
         <h1>Account Info</h1>
         <form action="<%= response.encodeURL("userInfoServlet")%>" method="post">
-            <table  class="example-code" cellspacing="5" border="0">
+            <table  class="example-code" cellspacing="5" border="0" style="margin: auto;">
                 <tr>
                     <td align="left" width="150">Email: </td>
                     <td><input type="text" name="email" size="40"></td>
