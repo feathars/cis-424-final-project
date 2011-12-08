@@ -10,6 +10,19 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <% int requestCount = -1;
+            String error = "You must be logged in to view that page.";
+            if (request.isRequestedSessionIdValid() == false) {%>
+        <%= "<script type='text/javascript'> \n window.location = '" + request.getContextPath() + "/view/log_in.jsp?error=" + error + "' \n </script>"%>
+        <% } else {
+            try {
+                User user = (User) session.getAttribute("user");
+                requestCount = RequestDB.selectRequestCount(user);
+            } catch (NullPointerException e) {%>
+        <%= "<script type='text/javascript'> \n window.location = '" + request.getContextPath() + "/view/log_in.jsp?error=" + error + "' \n </script>"%>
+        <% }
+            }
+        %>
         <meta http-equiv="Content-Type" content="text/html"/>
         <link rel="stylesheet" type="text/css" href="<%= request.getContextPath()%>/styles/main.css" />
         <link rel="stylesheet" type="text/css" href="<%= request.getContextPath()%>/styles/css.css" />
@@ -31,7 +44,14 @@
                 <b style=" float: right; font-size: 25px;" >
                     <a class="header" href="<%= response.encodeURL(request.getContextPath() + "/view/profile_info.jsp")%>"> Profile</a> &nbsp;|
                     <a class="header" href="<%= response.encodeURL(request.getContextPath() + "/view/requests.jsp")%>">
-                        Requests
+                        <%
+                            if (requestCount != -1) {
+                                if (requestCount > 0) {%>
+                        <%= "Requests " + "(" + requestCount + ")"%>
+                        <% } else {%>
+                        <%= "Requests"%>
+                        <% }
+                            }%>
                     </a> &nbsp;|
                     <a class="header" href="<%= response.encodeURL(request.getContextPath() + "/LogOut")%>">Log Out&nbsp;&nbsp;</a>
                 </b>
