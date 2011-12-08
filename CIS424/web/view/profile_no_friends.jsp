@@ -1,13 +1,13 @@
 <%@include file="header_user.jsp" %>
 <title>Profile No Friends</title>
-        <script type="text/javascript" src="../scripts/index.js"></script>
-        <script type="text/javascript" src="../scripts/demo.js"></script>
-        <script type="text/javascript" src="../scripts/jquery.color.js"></script>
-        <script type="text/javascript" src="../scripts/jquery-1.4.1.js"></script>
-        <script type="text/javascript" src="../scripts/jquery-ui-1.7.2.min.js"></script>
+        <script type="text/javascript" src="<%= request.getContextPath()%>/scripts/index.js"></script>
+        <script type="text/javascript" src="<%= request.getContextPath()%>/scripts/demo.js"></script>
+        <script type="text/javascript" src="<%= request.getContextPath()%>/scripts/jquery.color.js"></script>
+        <script type="text/javascript" src="<%= request.getContextPath()%>/scripts/jquery-1.4.1.js"></script>
+        <script type="text/javascript" src="<%= request.getContextPath()%>/scripts/jquery-ui-1.7.2.min.js"></script>
 
-        <link rel="stylesheet" type="text/css" href="../styles/index.css" />
-        <link rel="stylesheet" type="text/css" media="screen" href="../styles/css.css" />
+        <link rel="stylesheet" type="text/css" href="<%= request.getContextPath()%>/styles/index.css" />
+        <link rel="stylesheet" type="text/css" media="screen" href="<%= request.getContextPath()%>/styles/css.css" />
         <br><br><br>
       
                 <table class="example-code" cellspacing="5" border="0" bordercolor="#000000" 
