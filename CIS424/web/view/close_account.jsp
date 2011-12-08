@@ -3,7 +3,8 @@
 <title>Close Account</title>
 <br><br>
 <div id="box">
-    <table width="100%" ><tr><td colspan="2"><h2>Close Account</h2></td>
+    <h2>Close Account</h2>
+    <table width="100%" >
         <tr>
             <td colspan="2">Enter users email address to close account.</td>
         </tr>    
