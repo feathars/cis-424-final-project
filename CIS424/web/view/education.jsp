@@ -18,7 +18,7 @@
     <table align="center" border="0">
         <tr><td>
                 <br>
-                <h1 align="center">Work Information</h1>
+                <h1 align="center">Education</h1>
                 <div id="content">
                     <div id="tab-container">
                         <ul>
