@@ -6,9 +6,7 @@
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
-<html>
-    <head>
-    </head>
+
 
     <title>personal Information</title>
     <script type="text/javascript" src="../scripts/index.js"></script>
@@ -88,11 +86,12 @@
                     </form>
                 </div>
             </div>
-            
+            <%-- code to complete table. this table centers the entire content.--%>
             </td>
         </tr>
         </table>
     </center>
+            
     </body>
-</html>
+
 
