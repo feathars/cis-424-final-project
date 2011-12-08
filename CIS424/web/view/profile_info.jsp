@@ -52,9 +52,9 @@
                     <div id="tab-container">
 
                         <ul><%--url encode completed --%>
-                            <li class="selected"><a href="<%= response.encodeURL("profile_info.jsp")%>">Info</a></li>
-                            <li><a href="<%= response.encodeURL("profile_photos.jsp")%>">Photos</a></li>
-                            <li><a href="<%= response.encodeURL("profile_friends.jsp")%>">Friends</a></li>
+                            <li class="selected"><a href="<%= response.encodeURL(request.getContextPath() + "/view/profile_info.jsp")%>">Info</a></li>
+                            <li><a href="<%= response.encodeURL(request.getContextPath() + "/view/profile_photos.jsp")%>">Photos</a></li>
+                            <li><a href="<%= response.encodeURL(request.getContextPath() + "/view/profile_friends.jsp")%>">Friends</a></li>
                         </ul>
                     </div>
                     <div id="main-container">            
