@@ -17,19 +17,19 @@
             </tr>
             <tr>
                 <td class="left_align">Last Name in Diploma </td>
-                <td class="right_align"><input type="text" name="last_name" size="25"></input></td>
+                <td class="right_align"><input type="text" name="last_nameDiploma" size="25"></input></td>
             </tr>
             <tr>
                 <td class="left_align">Email *</td>
-                <td class="right_align"><input type="text" name="last_name" size="25"></input></td>
+                <td class="right_align"><input type="text" name="email" size="25"></input></td>
             </tr>
             <tr>
                 <td class="left_align">Password * </td>
-                <td class="right_align"><input type="text" name="last_name" size="25"></input></td>
+                <td class="right_align"><input type="text" name="password" size="25"></input></td>
             </tr>
             <tr>
                 <td class="left_align">Confirm Password * </td>
-                <td class="right_align"><input type="text" name="last_name" size="25"></input></td>
+                <td class="right_align"><input type="text" name="confirm password" size="25"></input></td>
             </tr>
             <tr>
                 <td class="left_align">Highest Degree at CPP *</td>
