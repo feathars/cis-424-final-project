@@ -50,13 +50,22 @@ table.home{
     margin-left: auto;
     text-align: center;
 }
-#header
+div.head
 {
     background-color: #1E4D2B;
     color: #C6930A;   
     height: 75px;
     text-decoration: none;
     border-style: none;
+}
+a.header, a.header:visited, a.header:hover
+{
+    background-color: #1E4D2B;
+    color: #C6930A;   
+    height: 75px;
+    text-decoration: none;
+    border-style: none;
+    
 }
 /* box used to display for the table, aligns the left column to the right*/
 #box{
