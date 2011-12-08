@@ -21,7 +21,7 @@
     <table align="center" border="0">
         <tr><td align="center">
                 <br>
-               
+
                 <table class="example-code" cellspacing="5" border="0" bordercolor="#000000" style="background-color:#FFFFFF" width="500" cellpadding="3" cellspacing="3">
 
                     <tr>
@@ -39,7 +39,7 @@
                     </tr>
                     <tr>
                         <td>
-                            <form action="<%= response.encodeURL("userInfoServlet")%>" method="post">
+                            <form action="<%= response.encodeURL("personal_information.jsp")%>" method="post">
                                 <input type="submit" value="Edit">
                             </form>
                         </td>
@@ -50,7 +50,7 @@
 
                 <div id="content">
                     <div id="tab-container">
-                        
+
                         <ul><%--url encode completed --%>
                             <li class="selected"><a href="<%= response.encodeURL("profile_info.jsp")%>">Info</a></li>
                             <li><a href="<%= response.encodeURL("profile_photos.jsp")%>">Photos</a></li>
@@ -60,11 +60,11 @@
                     <div id="main-container">            
 
                         <div>
-                            <fieldset>
-                                <legend>Personal Info</legend>
+                            <fieldset style="background-color:#FFFFFF; margin:.2em .5em; padding: .5em;">
+                                <legend style="color:#000000; font-weight: bold;">Personal Info </legend>
 
 
-                                <table   cellspacing="5" border="0">
+                                <table style="margin: 12px;"  align="left" cellspacing="5" border="0" width="560">
                                     <tr>
                                         <td align="left">Gender: [gender]</td>
                                         <td align="left">&nbsp;</td>
@@ -77,7 +77,7 @@
 
                                     <tr>
                                         <td>Home Phone: [home phone]</td>
-                                        <td>Cell Phone: [cell phone]</td>
+                                        <td align="right">Cell Phone: [cell phone]</td>
                                     </tr>
 
                                     <tr>
@@ -98,11 +98,11 @@
 
                             </fieldset>
                             <!-- Personal Info Section-->        
-                            <fieldset>
-                                <legend>Work Info</legend>
+                            <fieldset style="background-color:#FFFFFF; margin:.2em .5em; padding: .5em;">
+                                <legend style="color:#000000; font-weight: bold;">Personal Info </legend>
 
 
-                                <table   cellspacing="5" border="0">
+                                <table   style="margin: 12px;" align="left" cellspacing="5" border="0" width="560">
                                     <tr>
                                         <td align="left">Current Employer: [Cal Poly Pomona]</td>
                                         <td align="left">&nbsp;</td>
@@ -115,7 +115,7 @@
 
                                     <tr>
                                         <td>Work Address: [address][city][state][zipcode]</td>
-                                        <td>Cell Phone: [cell phone]</td>
+                                        <td align="right">Cell Phone: [cell phone]</td>
                                     </tr>
 
                                     <tr>
@@ -136,11 +136,11 @@
                             </fieldset>
 
                             <!-- Education Info Section-->        
-                            <fieldset>
-                                <legend>Education Info</legend>
+                            <fieldset style="background-color:#FFFFFF; margin:.2em .5em; padding: .5em;">
+                                <legend style="color:#000000; font-weight: bold;">Personal Info </legend>
 
 
-                                <table  cellspacing="5" border="0" width="400">
+                                <table   style="margin: 12px;" align="left" cellspacing="5" border="0" width="560">
                                     <tr>
                                         <td align="left">Institution: [Cal Poly Pomona]</td>
                                         <td align="left">&nbsp;</td>
@@ -148,7 +148,7 @@
 
                                     <tr>
                                         <td align="left">Degree: [bachelors]</td>
-                                        <td>Major: [CIS]</td>
+                                        <td align="right">Major: [CIS]</td>
                                     </tr>
 
                                     <tr>
@@ -168,7 +168,7 @@
 
                                     <tr>
                                         <td align="left">Degree: [bachelors]</td>
-                                        <td>Major: [CIS]</td>
+                                        <td align="right">Major: [CIS]</td>
                                     </tr>
 
                                     <tr>
