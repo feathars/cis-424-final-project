@@ -19,12 +19,11 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>personal Information</title>
         <link rel="stylesheet" type="text/css" media="screen" href="../styles/css.css" />
-                <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
     </head>
   
     <body>
-        <%@include file="../view/header_user.jsp" %>
-        <h1>Personal Information</h1>
+        <%@include file="/view/header_user.jsp" %>
+        <h1 align="left">Personal Information</h1>
         <div id="content">
             <div id="tab-container">
                 <ul>
@@ -38,7 +37,7 @@
             </div>
             <div id="main-container">
                 <form action="userInfoServlet" method="post">
-                    <table cellspacing="5" border="0">
+                    <table cellspacing="5" border="1">
                         <tr>
                             <td align="left">First Name: *</td>
                             <td><input type="text" name="firstName" size="50"></td>
@@ -54,8 +53,8 @@
                         </tr>
 
                         <tr>
-                            <td>Gender:</td>
-                            <td><select name="gender">
+                            <td align="left">Gender:</td>
+                            <td align="left"><select name="gender">
                                     <option value="male">Male</option>
                                     <option value="female">Female</option>
                                 </select>
@@ -81,10 +80,7 @@
                     </table>
                 </form>
             </div>
-            
-            <%@include file="footer.jsp" %>
-            <!--
         </div>
     </body>
 </html>
--->
+<%@include file="footer.jsp" %>
