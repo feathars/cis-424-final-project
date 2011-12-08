@@ -209,5 +209,5 @@
         </tr>
     </table>
 </center>
-<%@include file="footer.jsp" %>
+
 
