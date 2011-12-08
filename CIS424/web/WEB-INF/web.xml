@@ -44,6 +44,10 @@
         <servlet-name>SignUpServlet</servlet-name>
         <servlet-class>account.SignUpServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>ValidationUtil</servlet-name>
+        <servlet-class>utilities.ValidationUtil</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>sql_connection_servlet</servlet-name>
         <url-pattern>/sql_connection</url-pattern>
@@ -87,6 +91,10 @@
     <servlet-mapping>
         <servlet-name>SignUpServlet</servlet-name>
         <url-pattern>/SignUp</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ValidationUtil</servlet-name>
+        <url-pattern>/Validation</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
