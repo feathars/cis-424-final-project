@@ -28,7 +28,7 @@
     </tr>
     <tr>
         <td style="text-align: left;" >
-            <form action="userInfoServlet" method="post">
+            <form action="<%= response.encodeURL("personal_information.jsp")%>" method="post">
                 <input type="submit" value="Edit Profile">
             </form>
         </td>
