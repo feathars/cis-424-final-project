@@ -14,8 +14,8 @@
 <title>Profile Information</title>
 
 <center>
-      <h1 align="center">Profile Picture</h1>
-    <table align="center" border="0" width="730">
+    <h1 align="center">Profile Picture</h1>
+    <table align="center" border="0" width="750">
         <tr><td>
 
                 <div id="content">
@@ -29,67 +29,69 @@
                             <li><a href="<%= response.encodeURL("account_info.jsp")%>">Account Info</a></li>
                         </ul>
                     </div>
-                    <form action="<%= response.encodeURL("userInfoServlet")%>" method="post">
 
-                        <table border="0" bordercolor="#000000" style="background-color:#FFFFFF" width="400" cellpadding="3" cellspacing="3">
-                            <tr>
-                                <td rowspan="2" >
-                                    <img src="<%= request.getContextPath()%>/images/profile_image.jpg"><br></td>
-                                <td style="margin:0;"><p>Current File: Me.jpg</p></td>
-                                <td>&nbsp;</td>
-                                <td>&nbsp;</td>
-                            </tr>
-                            <tr>
-                                <td><input type="submit" value="Choose File"></td>
-                                <td><input type="submit" value="Delete Photo"></td>
-                                <td><input type="submit" value="Use as Default Photo"></td>
-                                <!--<td>Table Cell8</td>-->
-                            </tr>
+                    <div id="main-container">
+                        <form action="<%= response.encodeURL("userInfoServlet")%>" method="post">
 
-                            <tr>
-                                <td rowspan="2"><img src="<%= request.getContextPath()%>/images/profile_image.jpg"><br></td>
-                                <td>No file selected:</td>
-                                <td>&nbsp;</td>
-                                <td>&nbsp;</td>
-                            </tr>
-                            <tr>
-                                <td><input type="submit" value="Choose File"></td>
-                                <td>&nbsp;</td>
-                                <td>&nbsp;</td>
-                                <!--<td>Table Cell</td>-->
-                            </tr>
+                            <table  border="0" bordercolor="#000000" style="background-color:#FFFFFF"  cellpadding="5" cellspacing="3">
+                                <tr>
+                                    <td rowspan="2" >
+                                        <img src="<%= request.getContextPath()%>/images/profile_image.jpg"><br></td>
+                                    <td style="margin:0;"><p>Current File: Me.jpg</p></td>
+                                    <td>&nbsp;</td>
+                                    <td>&nbsp;</td>
+                                </tr>
+                                <tr>
+                                    <td><input type="submit" value="Choose File"></td>
+                                    <td><input type="submit" value="Delete Photo"></td>
+                                    <td><input type="submit" value="Use as Default Photo"></td>
+                                    <!--<td>Table Cell8</td>-->
+                                </tr>
 
-                            <tr>
-                                <td rowspan="2"><img src="<%= request.getContextPath()%>/images/profile_image.jpg"><br></td>
-                                <td>No File Sected: </td>
-                                <td>&nbsp;</td>
-                                <td>&nbsp;</td>
-                            </tr>
-                            <tr>
-                                <td><input type="submit" value="Choose File"></td>
-                                <td>&nbsp;</td>
-                                <td>&nbsp;</td>
-                                <!--<td>Table Cell</td>-->
-                            </tr>
-                            <tr>
-                                <td>&nbsp;</td>
-                                <td>&nbsp;</td>
-                                <td>&nbsp;</td>
-                                <td>&nbsp;</td>
-                            </tr>
-                            <tr>
-                                <td>&nbsp;</td>
-                                <td>
-                                    <input type="button" value="Cancel" onClick="window.location.href='<%= response.encodeURL("home.jsp")%>'"/></td>
-                                <td>
-                                    <input type="button" value="Save" onClick="window.location.href='<%= response.encodeURL("home.jsp")%>'"/></td>
-                                <td>&nbsp;</td>
-                            </tr>
-                        </table>
+                                <tr>
+                                    <td rowspan="2"><img src="<%= request.getContextPath()%>/images/profile_image.jpg"><br></td>
+                                    <td>No file selected:</td>
+                                    <td>&nbsp;</td>
+                                    <td>&nbsp;</td>
+                                </tr>
+                                <tr>
+                                    <td><input type="submit" value="Choose File"></td>
+                                    <td>&nbsp;</td>
+                                    <td>&nbsp;</td>
+                                    <!--<td>Table Cell</td>-->
+                                </tr>
 
-                    </form>
+                                <tr>
+                                    <td rowspan="2"><img src="<%= request.getContextPath()%>/images/profile_image.jpg"><br></td>
+                                    <td>No File Sected: </td>
+                                    <td>&nbsp;</td>
+                                    <td>&nbsp;</td>
+                                </tr>
+                                <tr>
+                                    <td><input type="submit" value="Choose File"></td>
+                                    <td>&nbsp;</td>
+                                    <td>&nbsp;</td>
+                                    <!--<td>Table Cell</td>-->
+                                </tr>
+                                <tr>
+                                    <td>&nbsp;</td>
+                                    <td>&nbsp;</td>
+                                    <td>&nbsp;</td>
+                                    <td>&nbsp;</td>
+                                </tr>
+                                <tr>
+                                    <td>&nbsp;</td>
+                                    <td>
+                                        <input type="button" value="Cancel" onClick="window.location.href='<%= response.encodeURL("home.jsp")%>'"/></td>
+                                    <td>
+                                        <input type="button" value="Save" onClick="window.location.href='<%= response.encodeURL("home.jsp")%>'"/></td>
+                                    <td>&nbsp;</td>
+                                </tr>
+                            </table>
+
+                        </form>
+                    </div>
                 </div>
-
 
                 <%-- code to complete table. this table centers the entire content.--%>
             </td>
