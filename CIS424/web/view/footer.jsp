@@ -8,12 +8,12 @@
     int currentYear = currentDate.get(Calendar.YEAR);
 %>
 
-<div id="footer">
-    <ul id="footer">
-        <li><a style="text-decoration: none; color: #FFFFFF" href="<%= response.encodeURL("terms.jsp")%>"/> Terms of Use</a> | &copy; Copyright <%= currentYear%> CPP Alumni Network</li>
-    </ul>
+<div style="text-decoration: none; color: #C6930A; background-color:#1E4D2B; padding: 2px; margin: 2px">
+    
+<p><a href="<%= response.encodeURL("terms.jsp")%>"/> Terms of Use</a> | &copy; Copyright <%= currentYear%> CPP Alumni Network</p>
+    
+    
 </div>
-
 </div>
 </body>
 </html>
