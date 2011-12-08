@@ -8,6 +8,28 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <%@page import="database.RequestDB" %>
+        <%@page import="business.User" %>
+        <% int count = -1;
+           String error = "You must be logged in to view that page."; 
+           if (request.isRequestedSessionIdValid() == false)
+           { %>
+                <%= "<script type='text/javascript'>\nwindow.location = '" + request.getContextPath() + "/view/log_in.jsp?error=" + error + "'\n</script>" %>
+        <% }
+           else
+           {
+            try
+            {
+                User user = (User)session.getAttribute("user");
+                count = RequestDB.selectRequestCount(user); 
+            }
+            catch(NullPointerException e)
+            { %>
+                <%= "<script type='text/javascript'>\nwindow.location = '" + request.getContextPath() + "/view/log_in.jsp?error=" + error + "'\n</script>" %>
+           <% }                                           
+           }
+        %>
+        
         <meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
         <link rel="stylesheet" type="text/css" href="<%= request.getContextPath()%>/styles/main.css" />
         <link rel="stylesheet" type="text/css" href="<%= request.getContextPath()%>/styles/css.css" />
