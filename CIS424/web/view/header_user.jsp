@@ -11,7 +11,7 @@
         <meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
         <link rel="stylesheet" type="text/css" href="<%= request.getContextPath()%>/styles/main.css" />
         <link rel="stylesheet" type="text/css" href="<%= request.getContextPath()%>/styles/css.css" />
-        <%@include file="../scripts/scripts.jsp" %> 
+
         <script type="text/javascript">
             function altRows(id){
                 if(document.getElementsByTagName){  
