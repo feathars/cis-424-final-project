@@ -15,8 +15,8 @@
         <div id="pagewidth">
             
             <div class="head">
-                <a href="home.jsp"><image src="<%= request.getContextPath()%>/images/CPP_logoblack.gif" height="65px" style="float: left; padding-left: 5px; padding-top: 5px;"/></a>
+                <a href="<%= request.getContextPath()%>/view/home.jsp"><image src="<%= request.getContextPath()%>/images/CPP_logoblack.gif" height="65px" style="float: left; padding-left: 5px; padding-top: 5px;"/></a>
                 <br>
                 <b text-decoration="none" style=" float: left; font-size:25px;">
-                    <a class="header" href="home.jsp">&nbsp;&nbsp;CPP Alumni Network</a></b>
+                    <a class="header" href="<%= request.getContextPath()%>/view/home.jsp">&nbsp;&nbsp;CPP Alumni Network</a></b>
             </div>
