@@ -60,11 +60,11 @@
                                 </tr>
 
                                 <tr>
-                                    <td align="left">About Me:</td>
+                                    <td align="left" style="position: relative; bottom: 30px;">About Me:</td>
                                     <td><textarea name="aboutMe" rows="3" cols="37"></textarea></td>
                                 </tr>
                                 <tr>
-                                    <td align="left">Professional Skills:</td>
+                                    <td align="left" style="position: relative; bottom: 30px;">Professional Skills:</td>
                                     <td><textarea name="professionalSkills" rows="3" cols="37"></textarea></td>
                                 </tr>
                                 <tr>
