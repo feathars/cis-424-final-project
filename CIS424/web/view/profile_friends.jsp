@@ -39,7 +39,7 @@
                     </tr>
                     <tr>
                         <td>
-                            <form action="<%= response.encodeURL("userInfoServlet")%>" method="post">
+                            <form action="<%= response.encodeURL(request.getContextPath() + "/view/personal_information.jsp")%>" method="post">
                                 <input type="submit" value="Edit">
                             </form>
                         </td>
