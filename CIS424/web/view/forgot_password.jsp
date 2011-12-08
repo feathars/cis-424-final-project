@@ -3,7 +3,8 @@
 <title>Forgot Password</title>
 <br><br>
             <div id="box">
-                <table width="100%" ><tr><td colspan="2"><h2>Forgot Password</h2></td>
+                <h2>Forgot Password</h2>
+                <table width="100%" >
                     <tr>
                         <td colspan="2">Please enter the email associated with your account.</td>
                     <tr>
