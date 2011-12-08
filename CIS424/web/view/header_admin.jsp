@@ -11,33 +11,11 @@
         <meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
         <link rel="stylesheet" type="text/css" href="<%= request.getContextPath()%>/styles/main.css" />
         <link rel="stylesheet" type="text/css" href="<%= request.getContextPath()%>/styles/css.css" />
-
         <%@include file="../scripts/scripts.jsp" %> 
-            function altRows(id){
-                if(document.getElementsByTagName){  
-		
-                    var table = document.getElementById(id);  
-                    var rows = table.getElementsByTagName("tr"); 
-		 
-                    for(i = 0; i < rows.length; i++){          
-                        if(i % 2 == 0){
-                            rows[i].className = "evenrowcolor";
-                        }else{
-                            rows[i].className = "oddrowcolor";
-                        }      
-                    }
-                }
-            }
-
-            window.onload=function(){
-                altRows('alternatecolor');
-            }
-        </script>
-
     </head>
     <body>
-    <div id="pagewidth">
-        
+        <div id="pagewidth">
+
             <div id="header">
                 <a href="<%= response.encodeURL("admin_home.jsp")%>"><image src="<%= request.getContextPath()%>/images/CPP_logoblack.gif" height="65px" style="float: left; padding-left: 5px; padding-top: 5px;"/></a>
                 <br>
