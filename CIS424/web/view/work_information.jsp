@@ -1,9 +1,9 @@
 <%@include file="header_user.jsp" %>
-<link rel="stylesheet" type="text/css" href="../styles/demo.css" />
-<link rel="stylesheet" type="text/css" href="../styles/index.css" />
+<link rel="stylesheet" type="text/css" href="<%= request.getContextPath()%>/styles/demo.css" />
+<link rel="stylesheet" type="text/css" href="<%= request.getContextPath()%>/styles/index.css" />
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Work Information</title>
-<link rel="stylesheet" type="text/css" media="screen" href="../styles/css.css" />
+<link rel="stylesheet" type="text/css" media="screen" href="<%= request.getContextPath()%>/styles/css.css" />
 
 <center>
     <table align="center" border="0">
