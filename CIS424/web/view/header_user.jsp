@@ -25,7 +25,7 @@
                     &nbsp;&nbsp;&nbsp;&nbsp;<font style="font-family: none">Search</font>&nbsp;</b> 
                 <b style=" float: left; font-size:25px;">
                     <input type="text" value=""/>&nbsp;
-                    <a class="header" href="dummy.jsp" text>Go</a></b>
+                    <a class="header" href="<%= request.getContextPath()%>view/dummy.jsp" text>Go</a></b>
 
                 <b style=" float: right; font-size: 25px;" >
                     <a class="header" href="<%= response.encodeURL("profile_info.jsp")%>"> Profile</a> &nbsp;|
