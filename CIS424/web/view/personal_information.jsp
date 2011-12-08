@@ -35,7 +35,7 @@
 
                     <div id="main-container">
                         <form action="userInfoServlet" method="post">
-                            <table cellspacing="5" border="1">
+                            <table cellspacing="5" border="0">
                                 <tr>
                                     <td align="left">First Name: *</td>
                                     <td><input type="text" name="firstName" size="50"></td>
