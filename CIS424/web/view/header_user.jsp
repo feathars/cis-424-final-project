@@ -30,7 +30,7 @@
                 <b style=" float: right; font-size: 25px;" >
                     <a class="header" href="<%= response.encodeURL("profile_info.jsp")%>"> Profile</a> &nbsp;|
                     <a class="header" href="<%= response.encodeURL("requests.jsp")%>">Requests</a> &nbsp;|
-                    <a class="header" href="<%= response.encodeURL(request.getContextPath() + "/LogOut")%>">Log Out</a>
+                    <a class="header" href="<%= response.encodeURL(request.getContextPath() + "/LogOut")%>">Log Out&nbsp;&nbsp;</a>
                 </b>
                 </br>
             </div>
