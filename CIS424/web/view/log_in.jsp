@@ -8,7 +8,7 @@
         <table width="100%" cellpadding="2">
         <tr>
             <td class="right_align" title="Enter email">Email: </td>
-            <td class="left_align"><input type="text" name="email" title="Enter password"/></td></tr>
+            <td class="left_align"><input type="text" name="email"/></td></tr>
         <tr>
             <td class="right_align">Password: </td>
             <td class="left_align"><input type="password" name="password"/></td>
