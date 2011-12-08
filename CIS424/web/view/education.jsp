@@ -21,12 +21,12 @@
                 <div id="content">
                     <div id="tab-container">
                         <ul>
-                            <li><a href="<%= request.getContextPath()%>personal_information.jsp">Personal Info</a></li>
-                            <li><a href="<%= request.getContextPath()%>work_information.jsp">Work Info</a></li>
-                            <li><a href="<%= request.getContextPath()%>profile_picture.jsp">Profile Picture</a></li>
-                            <li><a href="<%= request.getContextPath()%>contact_info.jsp">Contact Info</a></li>
-                            <li class="selected"><a href="<%= request.getContextPath()%>education.jsp">Education</a></li>
-                            <li><a href="<%= request.getContextPath()%>account_info.jsp">Account Info</a></li>
+                            <li><a href="<%= response.encodeURL("personal_information.jsp")%>">Personal Info</a></li>
+                            <li><a href="<%= response.encodeURL("work_information.jsp")%>">Work Info</a></li>
+                            <li><a href="<%= response.encodeURL("profile_picture.jsp")%>">Profile Picture</a></li>
+                            <li><a href="<%= response.encodeURL("contact_info.jsp")%>">Contact Info</a></li>
+                            <li class="selected"><a href="<%= response.encodeURL("education.jsp")%>">Education</a></li>
+                            <li><a href="<%= response.encodeURL("account_info.jsp")%>">Account Info</a></li>
                         </ul>
                     </div>
 
